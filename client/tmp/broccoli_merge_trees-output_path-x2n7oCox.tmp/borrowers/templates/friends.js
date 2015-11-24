@@ -1,0 +1,1 @@
+/Users/tsavani/twinks/ember/borrowers/tmp/broccoli_merge_trees-input_base_path-JXdHXxaX.tmp/1/borrowers/templates/friends.js

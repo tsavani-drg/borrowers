@@ -1,0 +1,1379 @@
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateFriends (20151123140933)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateFriends (20151123140933)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "friends" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstName" varchar, "lastName" varchar, "email" varchar, "twitter" varchar, "totalArticles" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151123140933"]]
+  [1m[36m (0.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 19:42:50 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.1ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-23 19:42:59 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"twinkal", "last_name"=>"savani", "email"=>"sadasdas", "twitter"=>"asdasdsad", "total_articles"=>nil}}
+Unpermitted parameters: first_name, last_name, total_articles
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "friends" ("email", "twitter", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "sadasdas"], ["twitter", "asdasdsad"], ["created_at", "2015-11-23 14:12:59.419234"], ["updated_at", "2015-11-23 14:12:59.419234"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 41ms (Views: 0.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 19:43:00 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.1ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-23 19:43:08 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"dasd", "last_name"=>"dsdasd", "email"=>"sdasd", "twitter"=>"dsdsad", "total_articles"=>nil}}
+Unpermitted parameters: first_name, last_name, total_articles
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "friends" ("email", "twitter", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "sdasd"], ["twitter", "dsdsad"], ["created_at", "2015-11-23 14:13:08.485545"], ["updated_at", "2015-11-23 14:13:08.485545"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 3ms (Views: 0.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 19:43:09 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.1ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends/null" for 127.0.0.1 at 2015-11-23 19:43:24 +0530
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"null"}
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT  "friends".* FROM "friends" WHERE "friends"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 6ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Friend with 'id'=null):
+  app/controllers/friends_controller.rb:53:in `set_friend'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.9ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.6ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (13.6ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 19:43:29 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.1ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-23 19:43:37 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"sadsd", "last_name"=>"ddsadsd", "email"=>"dsadd", "twitter"=>"dasdasdas", "total_articles"=>nil}}
+Unpermitted parameters: first_name, last_name, total_articles
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "friends" ("email", "twitter", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "dsadd"], ["twitter", "dasdasdas"], ["created_at", "2015-11-23 14:13:37.996855"], ["updated_at", "2015-11-23 14:13:37.996855"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 3ms (Views: 0.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 19:43:39 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.1ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 19:43:45 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.1ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 19:44:12 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.1ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends.json" for ::1 at 2015-11-23 19:44:23 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 19:46:00 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.1ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 19:46:16 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.1ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-23 19:47:08 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"asdas", "last_name"=>"dasdasd", "email"=>"sadad", "twitter"=>"asdasd", "total_articles"=>nil}}
+Unpermitted parameters: first_name, last_name, total_articles
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "friends" ("email", "twitter", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "sadad"], ["twitter", "asdasd"], ["created_at", "2015-11-23 14:17:08.980444"], ["updated_at", "2015-11-23 14:17:08.980444"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+Completed 201 Created in 6ms (Views: 0.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 19:47:20 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 19:47:24 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.2ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-23 19:48:19 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"asdad", "last_name"=>"dasds", "email"=>"asdsd", "twitter"=>"asdsada", "total_articles"=>nil}}
+Unpermitted parameters: first_name, last_name, total_articles
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "friends" ("email", "twitter", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "asdsd"], ["twitter", "asdsada"], ["created_at", "2015-11-23 14:18:19.106062"], ["updated_at", "2015-11-23 14:18:19.106062"]]
+  [1m[36m (0.4ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 2ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 19:48:24 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.1ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-23 19:49:55 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"dsad", "last_name"=>"sdsad", "email"=>"sdsad", "twitter"=>"sdads", "total_articles"=>nil}}
+Unpermitted parameters: first_name, last_name, total_articles
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "friends" ("email", "twitter", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "sdsad"], ["twitter", "sdads"], ["created_at", "2015-11-23 14:19:55.947471"], ["updated_at", "2015-11-23 14:19:55.947471"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 4ms (Views: 0.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 19:50:05 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.1ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends.json" for ::1 at 2015-11-23 19:50:14 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends/13511" for 127.0.0.1 at 2015-11-23 19:51:22 +0530
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"13511"}
+  [1m[35mFriend Load (0.1ms)[0m  SELECT  "friends".* FROM "friends" WHERE "friends"."id" = ? LIMIT 1  [["id", 13511]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Friend with 'id'=13511):
+  app/controllers/friends_controller.rb:53:in `set_friend'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.9ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.7ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (43.1ms)
+
+
+Started GET "/friends/1" for 127.0.0.1 at 2015-11-23 19:51:27 +0530
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT  "friends".* FROM "friends" WHERE "friends"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 19:51:32 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.2ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/friends.json" for ::1 at 2015-11-23 19:51:43 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-23 19:57:52 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"asdsda", "last_name"=>"sdasdas", "email"=>"sddasda", "twitter"=>"sadssda", "total_articles"=>nil}}
+Unpermitted parameters: first_name, last_name, total_articles
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "friends" ("email", "twitter", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "sddasda"], ["twitter", "sadssda"], ["created_at", "2015-11-23 14:27:52.195313"], ["updated_at", "2015-11-23 14:27:52.195313"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+Completed 201 Created in 5ms (Views: 0.5ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-23 20:03:49 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"sdff", "last_name"=>"dsfdfdsfsf", "email"=>"sdfdsfsd", "twitter"=>"sdfdsfdsf", "total_articles"=>nil}}
+Unpermitted parameters: first_name, last_name, total_articles
+Unpermitted parameters: first_name, last_name, total_articles
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "friends" ("email", "twitter", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "sdfdsfsd"], ["twitter", "sdfdsfdsf"], ["created_at", "2015-11-23 14:33:49.915635"], ["updated_at", "2015-11-23 14:33:49.915635"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 13ms (Views: 1.0ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-23 20:03:49 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"sdff", "last_name"=>"dsfdfdsfsf", "email"=>"sdfdsfsd", "twitter"=>"sdfdsfdsf", "total_articles"=>nil}}
+Unpermitted parameters: first_name, last_name, total_articles
+Unpermitted parameters: first_name, last_name, total_articles
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "friends" ("email", "twitter", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "sdfdsfsd"], ["twitter", "sdfdsfdsf"], ["created_at", "2015-11-23 14:33:49.924370"], ["updated_at", "2015-11-23 14:33:49.924370"]]
+  [1m[35m (0.4ms)[0m  commit transaction
+Completed 201 Created in 3ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-23 20:03:49 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"sdff", "last_name"=>"dsfdfdsfsf", "email"=>"sdfdsfsd", "twitter"=>"sdfdsfdsf", "total_articles"=>nil}}
+Unpermitted parameters: first_name, last_name, total_articles
+Unpermitted parameters: first_name, last_name, total_articles
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "friends" ("email", "twitter", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "sdfdsfsd"], ["twitter", "sdfdsfdsf"], ["created_at", "2015-11-23 14:33:49.929208"], ["updated_at", "2015-11-23 14:33:49.929208"]]
+  [1m[36m (0.4ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 3ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 20:03:52 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.2ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-23 20:08:03 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"asdasd", "last_name"=>"adfd", "email"=>"ddsds", "twitter"=>"sdcscsc", "total_articles"=>nil}}
+Unpermitted parameters: first_name, last_name, total_articles
+Unpermitted parameters: first_name, last_name, total_articles
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "friends" ("email", "twitter", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "ddsds"], ["twitter", "sdcscsc"], ["created_at", "2015-11-23 14:38:03.398443"], ["updated_at", "2015-11-23 14:38:03.398443"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 6ms (Views: 0.5ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-23 20:08:03 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"asdasd", "last_name"=>"adfd", "email"=>"ddsds", "twitter"=>"sdcscsc", "total_articles"=>nil}}
+Unpermitted parameters: first_name, last_name, total_articles
+Unpermitted parameters: first_name, last_name, total_articles
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "friends" ("email", "twitter", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "ddsds"], ["twitter", "sdcscsc"], ["created_at", "2015-11-23 14:38:03.408122"], ["updated_at", "2015-11-23 14:38:03.408122"]]
+  [1m[35m (0.4ms)[0m  commit transaction
+Completed 201 Created in 3ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-23 20:08:28 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"dsdsadsad", "last_name"=>"dfdfdsfd", "email"=>"dfddfdsf", "twitter"=>"dfdsfsdf", "total_articles"=>nil}}
+Unpermitted parameters: first_name, last_name, total_articles
+Unpermitted parameters: first_name, last_name, total_articles
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "friends" ("email", "twitter", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "dfddfdsf"], ["twitter", "dfdsfsdf"], ["created_at", "2015-11-23 14:38:28.439879"], ["updated_at", "2015-11-23 14:38:28.439879"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 5ms (Views: 0.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 20:11:18 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-23 20:11:30 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"xzasd", "last_name"=>"adas", "email"=>"dds", "twitter"=>"sdsdsdc", "total_articles"=>nil}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'first_name' for Friend.):
+  app/controllers/friends_controller.rb:21:in `create'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.3ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (13.5ms)
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "friends" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstName" varchar, "lastName" varchar, "email" varchar, "twitter" varchar, "totalArticles" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151123140933')
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "friends" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstName" varchar, "lastName" varchar, "email" varchar, "twitter" varchar, "totalArticles" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151123140933')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-23 20:13:21 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"xzasd", "last_name"=>"adas", "email"=>"dds", "twitter"=>"sdsdsdc", "total_articles"=>nil}}
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.3ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'first_name' for Friend.):
+  app/controllers/friends_controller.rb:21:in `create'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.6ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (14.1ms)
+  [1m[36m (2.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateFriends (20151123140933)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "friends" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "twitter" varchar, "total_articles" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151123140933"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mFriend Load (0.7ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-23 20:16:41 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"xzasd", "last_name"=>"adas", "email"=>"dds", "twitter"=>"sdsdsdc", "total_articles"=>nil}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "friends" ("first_name", "last_name", "email", "twitter", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "xzasd"], ["last_name", "adas"], ["email", "dds"], ["twitter", "sdsdsdc"], ["created_at", "2015-11-23 14:46:41.986913"], ["updated_at", "2015-11-23 14:46:41.986913"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+Completed 201 Created in 38ms (Views: 1.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 20:16:46 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.1ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 20:16:48 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.2ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 20:17:10 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 20:18:01 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.1ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 20:18:01 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.1ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 20:18:22 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.1ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-23 20:18:28 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>nil, "last_name"=>nil, "email"=>"ddssd", "twitter"=>"ddssads", "total_articles"=>nil}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "friends" ("email", "twitter", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "ddssd"], ["twitter", "ddssads"], ["created_at", "2015-11-23 14:48:28.803733"], ["updated_at", "2015-11-23 14:48:28.803733"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 3ms (Views: 0.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 20:18:30 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.1ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 20:18:33 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.1ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 20:19:27 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.1ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 20:20:57 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.1ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-23 20:21:24 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"asdd", "last_name"=>"cdfds", "email"=>"sdfsdfds", "twitter"=>"sdfsdfds", "total_articles"=>nil}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "friends" ("first_name", "last_name", "email", "twitter", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "asdd"], ["last_name", "cdfds"], ["email", "sdfsdfds"], ["twitter", "sdfsdfds"], ["created_at", "2015-11-23 14:51:24.864401"], ["updated_at", "2015-11-23 14:51:24.864401"]]
+  [1m[35m (0.4ms)[0m  commit transaction
+Completed 201 Created in 3ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 20:21:26 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.1ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 20:21:29 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.1ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 20:21:52 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 20:22:43 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.1ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 20:24:16 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.1ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-23 20:24:23 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"sdfsdf", "last_name"=>"fdfsdf", "email"=>"sdsfs", "twitter"=>"sdfsfsdf", "total_articles"=>nil}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "friends" ("first_name", "last_name", "email", "twitter", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "sdfsdf"], ["last_name", "fdfsdf"], ["email", "sdsfs"], ["twitter", "sdfsfsdf"], ["created_at", "2015-11-23 14:54:23.270904"], ["updated_at", "2015-11-23 14:54:23.270904"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+Completed 201 Created in 4ms (Views: 0.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/friends.json" for ::1 at 2015-11-23 20:25:03 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/friends/null" for 127.0.0.1 at 2015-11-23 20:27:49 +0530
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"null"}
+  [1m[35mFriend Load (0.2ms)[0m  SELECT  "friends".* FROM "friends" WHERE "friends"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 6ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Friend with 'id'=null):
+  app/controllers/friends_controller.rb:54:in `set_friend'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (14.7ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 20:27:56 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 20:28:06 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.1ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 20:28:52 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.1ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 20:32:00 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.2ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/friends.json" for ::1 at 2015-11-23 20:33:29 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-23 20:36:55 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"wdfddf", "last_name"=>"dfdfsdf", "email"=>"dsfdfdsf", "twitter"=>"dfdsfs", "total_articles"=>nil}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "friends" ("first_name", "last_name", "email", "twitter", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "wdfddf"], ["last_name", "dfdfsdf"], ["email", "dsfdfdsf"], ["twitter", "dfdsfs"], ["created_at", "2015-11-23 15:06:55.115203"], ["updated_at", "2015-11-23 15:06:55.115203"]]
+  [1m[35m (0.4ms)[0m  commit transaction
+Completed 201 Created in 3ms (Views: 0.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/friends.json" for ::1 at 2015-11-23 20:37:06 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/friends" for 127.0.0.1 at 2015-11-23 20:38:27 +0530
+
+ActionController::RoutingError (No route matches [GET] "/api/friends"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (3.0ms)
+
+
+Started GET "/api/friends" for 127.0.0.1 at 2015-11-23 20:39:04 +0530
+
+ActionController::RoutingError (No route matches [GET] "/api/friends"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (3.4ms)
+
+
+Started GET "/api/friends" for 127.0.0.1 at 2015-11-23 20:39:24 +0530
+
+ActionController::RoutingError (No route matches [GET] "/api/friends"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (3.2ms)
+
+
+Started GET "/api/friends" for 127.0.0.1 at 2015-11-23 20:39:37 +0530
+
+ActionController::RoutingError (No route matches [GET] "/api/friends"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (33.2ms)
+  [1m[36mFriend Load (0.4ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+SQLite3::SQLException: no such table: friends: SELECT "friends".* FROM "friends"
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateFriends (20151123140933)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "friends" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstName" varchar, "lastName" varchar, "email" varchar, "twitter" varchar, "totalArticles" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151123140933"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+SQLite3::SQLException: no such table: friends: SELECT "friends".* FROM "friends"
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+SQLite3::SQLException: no such table: friends: SELECT "friends".* FROM "friends"
+  [1m[36mFriend Load (1.0ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+
+
+Started GET "/friends.json" for ::1 at 2015-11-23 20:44:50 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.1ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-11-23 20:44:56 +0530
+Processing by FriendsController#index as HTML
+  [1m[36mFriend Load (0.1ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-11-23 20:44:59 +0530
+Processing by FriendsController#index as HTML
+  [1m[35mFriend Load (0.1ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends" for ::1 at 2015-11-23 20:45:08 +0530
+Processing by FriendsController#index as HTML
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/friends.json" for ::1 at 2015-11-23 20:45:13 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.1ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "friends" ("firstName", "lastName", "email", "twitter", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["firstName", "abc"], ["lastName", "last"], ["email", "email@email.com"], ["twitter", "hi"], ["created_at", "2015-11-23 15:17:12.025286"], ["updated_at", "2015-11-23 15:17:12.025286"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+
+
+Started GET "/api/friends" for 127.0.0.1 at 2015-11-23 20:49:29 +0530
+
+ActionController::RoutingError (No route matches [GET] "/api/friends"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (4.0ms)
+
+
+Started GET "/api/friends" for 127.0.0.1 at 2015-11-23 20:49:33 +0530
+
+ActionController::RoutingError (No route matches [GET] "/api/friends"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (3.4ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 20:49:55 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 20:50:03 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.1ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 20:50:11 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.1ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 20:50:23 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.1ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 20:50:33 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-23 20:50:44 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"fdsfs", "last_name"=>"dfdf", "email"=>"sdfdff", "twitter"=>"dfdf", "total_articles"=>nil}}
+Unpermitted parameters: first_name, last_name, total_articles
+Unpermitted parameters: first_name, last_name, total_articles
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "friends" ("email", "twitter", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "sdfdff"], ["twitter", "dfdf"], ["created_at", "2015-11-23 15:20:44.964703"], ["updated_at", "2015-11-23 15:20:44.964703"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+Completed 201 Created in 6ms (Views: 1.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 20:52:19 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-23 20:52:25 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"sadas", "last_name"=>"sadsadasd", "email"=>"asdasd", "twitter"=>"sdsdsad", "total_articles"=>nil}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'first_name' for Friend.):
+  app/controllers/friends_controller.rb:21:in `create'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (9.7ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-23 20:54:55 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"sadas", "last_name"=>"sadsadasd", "email"=>"asdasd", "twitter"=>"sdsdsad", "total_articles"=>nil}}
+Unpermitted parameters: first_name, last_name, total_articles
+Unpermitted parameters: first_name, last_name, total_articles
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "friends" ("email", "twitter", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "asdasd"], ["twitter", "sdsdsad"], ["created_at", "2015-11-23 15:24:55.203307"], ["updated_at", "2015-11-23 15:24:55.203307"]]
+  [1m[35m (0.4ms)[0m  commit transaction
+Completed 201 Created in 9ms (Views: 0.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-23 20:54:56 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.1ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateFriends (20151124072821)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateFriends (20151124072821)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateFriends (20151124072821)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (2.5ms)[0m  [1mCREATE TABLE "friends" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "twitter" varchar, "total_articles" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151124072821"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 13:03:16 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.2ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-24 13:03:22 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"dsaadas", "last_name"=>"dqsdsd", "email"=>"dsdsad", "twitter"=>"dsdsad", "total_articles"=>nil}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "friends" ("first_name", "last_name", "email", "twitter", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "dsaadas"], ["last_name", "dqsdsd"], ["email", "dsdsad"], ["twitter", "dsdsad"], ["created_at", "2015-11-24 07:33:22.868658"], ["updated_at", "2015-11-24 07:33:22.868658"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 46ms (Views: 1.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 13:03:24 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.2ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 13:03:27 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.1ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 13:04:20 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.1ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 13:04:54 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.1ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-24 13:05:01 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"csddaa", "last_name"=>"fdfd", "email"=>"fdsfsdf", "twitter"=>"dsfdfdfd", "total_articles"=>nil}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "friends" ("first_name", "last_name", "email", "twitter", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "csddaa"], ["last_name", "fdfd"], ["email", "fdsfsdf"], ["twitter", "dsfdfdfd"], ["created_at", "2015-11-24 07:35:01.165012"], ["updated_at", "2015-11-24 07:35:01.165012"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+Completed 201 Created in 3ms (Views: 0.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 13:05:06 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 13:05:10 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.1ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 13:05:16 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.1ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends" for ::1 at 2015-11-24 13:05:20 +0530
+Processing by FriendsController#index as HTML
+  [1m[35mFriend Load (0.1ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 13:20:07 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.1ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 13:20:12 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.1ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 13:20:25 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.1ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-24 13:20:30 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"dsdcs", "last_name"=>"dsfdsfdsf", "email"=>"dsfdsf", "twitter"=>"dsfdfdf", "total_articles"=>nil}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "friends" ("first_name", "last_name", "email", "twitter", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "dsdcs"], ["last_name", "dsfdsfdsf"], ["email", "dsfdsf"], ["twitter", "dsfdfdf"], ["created_at", "2015-11-24 07:50:30.944996"], ["updated_at", "2015-11-24 07:50:30.944996"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+Completed 201 Created in 3ms (Views: 0.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 13:20:32 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 13:20:34 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.2ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/friends.json" for ::1 at 2015-11-24 13:22:30 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.1ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 13:25:16 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.1ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-24 13:25:22 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"ssdfd", "last_name"=>"dfdsfs", "email"=>"dfdsf", "twitter"=>"dfdsfsd", "total_articles"=>nil}}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "friends" ("first_name", "last_name", "email", "twitter", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "ssdfd"], ["last_name", "dfdsfs"], ["email", "dfdsf"], ["twitter", "dfdsfsd"], ["created_at", "2015-11-24 07:55:22.941379"], ["updated_at", "2015-11-24 07:55:22.941379"]]
+  [1m[36m (0.4ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 3ms (Views: 0.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 13:25:23 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.1ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends.json" for ::1 at 2015-11-24 13:26:22 +0530
+
+SyntaxError (/Users/tsavani/twinks/rails/friends_backend/app/controllers/friends_controller.rb:9: syntax error, unexpected tIDENTIFIER, expecting keyword_end):
+  app/controllers/friends_controller.rb:9: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.3ms)
+
+
+Started GET "/friends.json" for ::1 at 2015-11-24 13:27:20 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/friends.json" for ::1 at 2015-11-24 13:37:21 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.2ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/friends.json" for ::1 at 2015-11-24 13:37:24 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/friends.json" for ::1 at 2015-11-24 13:38:28 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/friends.json" for ::1 at 2015-11-24 13:40:13 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/friends.json" for ::1 at 2015-11-24 13:41:54 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.2ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/friends.json" for ::1 at 2015-11-24 13:41:56 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/friends.json" for ::1 at 2015-11-24 13:42:16 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.2ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/friends" for ::1 at 2015-11-24 13:42:39 +0530
+Processing by FriendsController#index as HTML
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/friends" for ::1 at 2015-11-24 13:42:41 +0530
+Processing by FriendsController#index as HTML
+  [1m[35mFriend Load (0.2ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/friends" for ::1 at 2015-11-24 13:42:43 +0530
+Processing by FriendsController#index as HTML
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 13:42:48 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.1ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 13:42:51 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.1ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 13:42:56 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.1ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+  [1m[36m (8.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.8ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateFriends (20151124072821)
+  [1m[35m (6.2ms)[0m  BEGIN
+  [1m[36m (24.3ms)[0m  [1mCREATE TABLE "friends" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "twitter" character varying, "total_articles" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151124072821"]]
+  [1m[36m (6.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (4.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'friends'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/friends" for ::1 at 2015-11-24 13:49:00 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#index as HTML
+  [1m[35mFriend Load (0.6ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/friends" for ::1 at 2015-11-24 13:49:02 +0530
+Processing by FriendsController#index as HTML
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+  [1m[36m (5.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateFriends (20151124082110)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (4.3ms)[0m  [1mCREATE TABLE "friends" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "twitter" character varying, "total_articles" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151124082110"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (4.5ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'friends'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/friends" for ::1 at 2015-11-24 13:52:10 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#index as HTML
+  [1m[35mFriend Load (0.6ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/friends" for ::1 at 2015-11-24 13:52:12 +0530
+Processing by FriendsController#index as HTML
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 13:52:17 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-24 13:52:23 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"dfdf", "last_name"=>"dffdsd", "email"=>"sdffd", "twitter"=>"sdfdsfsd", "total_articles"=>nil}}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "friends" ("first_name", "last_name", "email", "twitter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["first_name", "dfdf"], ["last_name", "dffdsd"], ["email", "sdffd"], ["twitter", "sdfdsfsd"], ["created_at", "2015-11-24 08:22:23.304919"], ["updated_at", "2015-11-24 08:22:23.304919"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Completed 201 Created in 19ms (Views: 2.5ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 13:52:24 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 13:52:27 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for ::1 at 2015-11-24 13:52:39 +0530
+Processing by FriendsController#index as HTML
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for ::1 at 2015-11-24 13:54:33 +0530
+Processing by FriendsController#index as HTML
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/friends" for ::1 at 2015-11-24 15:37:02 +0530
+Processing by FriendsController#index as HTML
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 13ms (Views: 8.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/friends" for ::1 at 2015-11-24 15:37:04 +0530
+Processing by FriendsController#index as HTML
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends.json" for ::1 at 2015-11-24 15:37:10 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends.json" for ::1 at 2015-11-24 15:37:32 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends.json" for ::1 at 2015-11-24 15:38:18 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.6ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 12ms (Views: 7.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 15:38:28 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 15:38:30 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-24 15:38:37 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"fvsf", "last_name"=>"dsfdsf", "email"=>"dsfd", "twitter"=>"dsfdsfd", "total_articles"=>nil}}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "friends" ("first_name", "last_name", "email", "twitter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["first_name", "fvsf"], ["last_name", "dsfdsf"], ["email", "dsfd"], ["twitter", "dsfdsfd"], ["created_at", "2015-11-24 10:08:37.805396"], ["updated_at", "2015-11-24 10:08:37.805396"]]
+  [1m[36m (6.1ms)[0m  [1mCOMMIT[0m
+Completed 201 Created in 14ms (Views: 1.0ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 15:38:39 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.4ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 15:38:41 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends/1" for 127.0.0.1 at 2015-11-24 15:38:52 +0530
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mFriend Load (0.3ms)[0m  SELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends/1" for 127.0.0.1 at 2015-11-24 15:38:54 +0530
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/friends/1" for 127.0.0.1 at 2015-11-24 15:38:56 +0530
+Processing by FriendsController#update as JSON
+  Parameters: {"friend"=>{"first_name"=>"dfdf", "last_name"=>"dffdsd", "email"=>"sdffd", "twitter"=>"sdfdsfsd", "total_articles"=>nil}, "id"=>"1"}
+  [1m[35mFriend Load (0.3ms)[0m  SELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 204 No Content in 2ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 15:38:58 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends.json" for ::1 at 2015-11-24 16:36:59 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (7.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.7ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 22ms (Views: 9.2ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 16:37:04 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-24 16:37:11 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"xcvxcv", "last_name"=>"fv", "email"=>"dfdbf", "twitter"=>"dfdvdfv", "total_articles"=>nil}}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "friends" ("first_name", "last_name", "email", "twitter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "xcvxcv"], ["last_name", "fv"], ["email", "dfdbf"], ["twitter", "dfdvdfv"], ["created_at", "2015-11-24 11:07:11.870905"], ["updated_at", "2015-11-24 11:07:11.870905"]]
+  [1m[35m (5.7ms)[0m  COMMIT
+Completed 201 Created in 15ms (Views: 1.1ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/friends/3" for 127.0.0.1 at 2015-11-24 16:37:21 +0530
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/friends/3" for 127.0.0.1 at 2015-11-24 16:37:26 +0530
+Processing by FriendsController#update as JSON
+  Parameters: {"friend"=>{"first_name"=>"xcvxcv", "last_name"=>"savani", "email"=>"dfdbf", "twitter"=>"dfdvdfv", "total_articles"=>nil}, "id"=>"3"}
+  [1m[35mFriend Load (0.5ms)[0m  SELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "friends" SET "last_name" = $1, "updated_at" = $2 WHERE "friends"."id" = $3[0m  [["last_name", "savani"], ["updated_at", "2015-11-24 11:07:26.165160"], ["id", 3]]
+  [1m[35m (6.1ms)[0m  COMMIT
+Completed 204 No Content in 11ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 16:37:27 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.4ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 16:37:30 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 17:51:06 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)

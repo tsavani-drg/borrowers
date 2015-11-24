@@ -1,0 +1,1 @@
+/Users/tsavani/twinks/ember/borrowers/client/tmp/broccoli_merge_trees-input_base_path-DT3iNosf.tmp/2/borrowers/tests/helpers/resolver.jshint.js

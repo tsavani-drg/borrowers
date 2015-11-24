@@ -1,0 +1,1 @@
+/Users/tsavani/twinks/ember/borrowers/tmp/concat_with_maps-output_path-qI1yN1kQ.tmp/assets/borrowers.js

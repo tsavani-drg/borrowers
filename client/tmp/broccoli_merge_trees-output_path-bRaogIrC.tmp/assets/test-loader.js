@@ -1,0 +1,1 @@
+/Users/tsavani/twinks/ember/borrowers/client/bower_components/ember-cli-test-loader/test-loader.js

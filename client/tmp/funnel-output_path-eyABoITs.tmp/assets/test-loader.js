@@ -1,0 +1,1 @@
+/Users/tsavani/twinks/ember/borrowers/tmp/funnel-input_base_path-985Jw6vA.tmp/0/bower_components/ember-cli-test-loader/test-loader.js

@@ -1,0 +1,1 @@
+/Users/tsavani/twinks/ember/borrowers/tmp/config_replace-output_path-x1oJ456c.tmp/tests-suffix.js
