@@ -14,12 +14,20 @@ define('borrowers/tests/app.jshint', ['exports'], function (exports) {
     assert.ok(false, 'app.js should pass jshint.\napp.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\napp.js: line 2, col 1, \'import\' is only available in ES6 (use esnext option).\napp.js: line 3, col 1, \'import\' is only available in ES6 (use esnext option).\napp.js: line 4, col 1, \'import\' is only available in ES6 (use esnext option).\napp.js: line 6, col 1, \'let\' is available in ES6 (use esnext option) or Mozilla JS extensions (use moz).\napp.js: line 13, col 3, \'object short notation\' is available in ES6 (use esnext option) or Mozilla JS extensions (use moz).\napp.js: line 18, col 1, \'export\' is only available in ES6 (use esnext option).\n\n7 errors');
   });
 });
+define('borrowers/tests/controllers/friends/base.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - controllers/friends');
+  QUnit.test('controllers/friends/base.js should pass jshint', function (assert) {
+    assert.ok(false, 'controllers/friends/base.js should pass jshint.\ncontrollers/friends/base.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\ncontrollers/friends/base.js: line 3, col 1, \'export\' is only available in ES6 (use esnext option).\ncontrollers/friends/base.js: line 6, col 5, Bad line breaking before \'&&\'.\n\n3 errors');
+  });
+});
 define('borrowers/tests/controllers/friends/edit.jshint', ['exports'], function (exports) {
   'use strict';
 
   QUnit.module('JSHint - controllers/friends');
   QUnit.test('controllers/friends/edit.js should pass jshint', function (assert) {
-    assert.ok(false, 'controllers/friends/edit.js should pass jshint.\ncontrollers/friends/edit.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\ncontrollers/friends/edit.js: line 2, col 1, \'export\' is only available in ES6 (use esnext option).\ncontrollers/friends/edit.js: line 10, col 6, Bad line breaking before \'&&\'.\n\n3 errors');
+    assert.ok(false, 'controllers/friends/edit.js should pass jshint.\ncontrollers/friends/edit.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\ncontrollers/friends/edit.js: line 3, col 1, \'export\' is only available in ES6 (use esnext option).\n\n2 errors');
   });
 });
 define('borrowers/tests/controllers/friends/new.jshint', ['exports'], function (exports) {
@@ -27,7 +35,7 @@ define('borrowers/tests/controllers/friends/new.jshint', ['exports'], function (
 
   QUnit.module('JSHint - controllers/friends');
   QUnit.test('controllers/friends/new.js should pass jshint', function (assert) {
-    assert.ok(false, 'controllers/friends/new.js should pass jshint.\ncontrollers/friends/new.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\ncontrollers/friends/new.js: line 3, col 1, \'export\' is only available in ES6 (use esnext option).\ncontrollers/friends/new.js: line 6, col 5, Bad line breaking before \'&&\'.\n\n3 errors');
+    assert.ok(false, 'controllers/friends/new.js should pass jshint.\ncontrollers/friends/new.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\ncontrollers/friends/new.js: line 3, col 1, \'export\' is only available in ES6 (use esnext option).\n\n2 errors');
   });
 });
 define('borrowers/tests/helpers/destroy-app', ['exports', 'ember'], function (exports, _ember) {
@@ -216,6 +224,27 @@ define('borrowers/tests/unit/adapters/application-test.jshint', ['exports'], fun
   QUnit.module('JSHint - unit/adapters');
   QUnit.test('unit/adapters/application-test.js should pass jshint', function (assert) {
     assert.ok(true, 'unit/adapters/application-test.js should pass jshint.');
+  });
+});
+define('borrowers/tests/unit/controllers/friends/base-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('controller:friends/base', 'Unit | Controller | friends/base', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  // Replace this with your real tests.
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var controller = this.subject();
+    assert.ok(controller);
+  });
+});
+define('borrowers/tests/unit/controllers/friends/base-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - unit/controllers/friends');
+  QUnit.test('unit/controllers/friends/base-test.js should pass jshint', function (assert) {
+    assert.ok(true, 'unit/controllers/friends/base-test.js should pass jshint.');
   });
 });
 define('borrowers/tests/unit/controllers/friends/edit-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {

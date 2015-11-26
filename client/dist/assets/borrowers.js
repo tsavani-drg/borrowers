@@ -37,31 +37,7 @@ define('borrowers/components/app-version', ['exports', 'ember-cli-app-version/co
 define('borrowers/controllers/array', ['exports', 'ember'], function (exports, _ember) {
   exports['default'] = _ember['default'].Controller;
 });
-define('borrowers/controllers/friends/edit', ['exports', 'ember'], function (exports, _ember) {
-  exports['default'] = _ember['default'].Controller.extend({
-    isValid: _ember['default'].computed('model.email', 'model.firstName', 'model.lastName', 'model.twitter', function () {
-      return !_ember['default'].isEmpty(this.get('model.email')) && !_ember['default'].isEmpty(this.get('model.firstName')) && !_ember['default'].isEmpty(this.get('model.lastName')) && !_ember['default'].isEmpty(this.get('model.twitter'));
-    }),
-    actions: {
-      save: function save() {
-        if (this.get('isValid')) {
-          var _this = this;
-          this.get('model').save().then(function (friend) {
-            _this.transitionToRoute('friends.show', friend);
-          });
-        } else {
-          this.set('errorMessage', 'You have to fill all the fields');
-        }
-        return false;
-      },
-      cancel: function cancel() {
-        this.transitionToRoute('friends.show', this.get('model'));
-        return false;
-      }
-    }
-  });
-});
-define('borrowers/controllers/friends/new', ['exports', 'ember'], function (exports, _ember) {
+define('borrowers/controllers/friends/base', ['exports', 'ember'], function (exports, _ember) {
   exports['default'] = _ember['default'].Controller.extend({
     isValid: _ember['default'].computed('model.firstName', 'model.email', 'model.lastName', 'model.twitter', function () {
       return !_ember['default'].isEmpty(this.get('model.firstName')) && !_ember['default'].isEmpty(this.get('model.email')) && !_ember['default'].isEmpty(this.get('model.lastName')) && !_ember['default'].isEmpty(this.get('model.twitter'));
@@ -79,6 +55,25 @@ define('borrowers/controllers/friends/new', ['exports', 'ember'], function (expo
         }
         return false;
       },
+      cancel: function cancel() {
+        return true;
+      }
+    }
+  });
+});
+define('borrowers/controllers/friends/edit', ['exports', 'borrowers/controllers/friends/base'], function (exports, _borrowersControllersFriendsBase) {
+  exports['default'] = _borrowersControllersFriendsBase['default'].extend({
+    actions: {
+      cancel: function cancel() {
+        this.transitionToRoute('friends.show', this.get('model'));
+        return false;
+      }
+    }
+  });
+});
+define('borrowers/controllers/friends/new', ['exports', 'borrowers/controllers/friends/base'], function (exports, _borrowersControllersFriendsBase) {
+  exports['default'] = _borrowersControllersFriendsBase['default'].extend({
+    actions: {
       cancel: function cancel() {
         this.get('model').deleteRecord();
         this.transitionToRoute('friends');
@@ -180,10 +175,27 @@ define('borrowers/routes/friends/new', ['exports', 'ember'], function (exports, 
 	});
 });
 define('borrowers/routes/friends/show', ['exports', 'ember'], function (exports, _ember) {
-  exports['default'] = _ember['default'].Route.extend({});
+	exports['default'] = _ember['default'].Route.extend({});
 });
 define('borrowers/routes/friends', ['exports', 'ember'], function (exports, _ember) {
-  exports['default'] = _ember['default'].Route.extend({});
+  exports['default'] = _ember['default'].Route.extend({
+    actions: {
+      save: function save() {
+        console.log('save action bubbled to friends route');
+        return true;
+      },
+      cancel: function cancel() {
+        console.log('cancel action bubbled to friends route');
+        return true;
+      },
+      'delete': function _delete(friend) {
+        var _this = this;
+        friend.destroyRecord().then(function () {
+          _this.transitionTo('friends.index');
+        });
+      }
+    }
+  });
 });
 define("borrowers/templates/application", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template((function () {
@@ -197,7 +209,7 @@ define("borrowers/templates/application", ["exports"], function (exports) {
             "column": 0
           },
           "end": {
-            "line": 4,
+            "line": 9,
             "column": 0
           }
         },
@@ -219,14 +231,33 @@ define("borrowers/templates/application", ["exports"], function (exports) {
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
+        var el1 = dom.createElement("div");
+        dom.setAttribute(el1, "class", "row");
+        var el2 = dom.createTextNode(" \n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("div");
+        dom.setAttribute(el2, "class", "full");
+        var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n  ");
+        dom.appendChild(el2, el3);
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
         return el0;
       },
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-        var morphs = new Array(1);
+        var morphs = new Array(2);
         morphs[0] = dom.createMorphAt(fragment, 2, 2, contextualElement);
+        morphs[1] = dom.createMorphAt(dom.childAt(fragment, [4, 1]), 1, 1);
         return morphs;
       },
-      statements: [["content", "outlet", ["loc", [null, [3, 0], [3, 10]]]]],
+      statements: [["inline", "partial", ["partials/header"], [], ["loc", [null, [3, 0], [3, 29]]]], ["content", "outlet", ["loc", [null, [6, 4], [6, 14]]]]],
       locals: [],
       templates: []
     };
@@ -453,11 +484,11 @@ define("borrowers/templates/friends/index", ["exports"], function (exports) {
           "loc": {
             "source": null,
             "start": {
-              "line": 6,
+              "line": 13,
               "column": 2
             },
             "end": {
-              "line": 10,
+              "line": 18,
               "column": 2
             }
           },
@@ -468,12 +499,23 @@ define("borrowers/templates/friends/index", ["exports"], function (exports) {
         hasRendered: false,
         buildFragment: function buildFragment(dom) {
           var el0 = dom.createDocumentFragment();
-          var el1 = dom.createTextNode("  ");
+          var el1 = dom.createTextNode("	");
           dom.appendChild(el0, el1);
-          var el1 = dom.createElement("li");
+          var el1 = dom.createElement("tr");
           var el2 = dom.createTextNode("\n    ");
           dom.appendChild(el1, el2);
-          var el2 = dom.createComment("");
+          var el2 = dom.createElement("td");
+          var el3 = dom.createComment("");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode(" \n    ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("td");
+          var el3 = dom.createElement("a");
+          dom.setAttribute(el3, "href", "#");
+          var el4 = dom.createTextNode("Delete");
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("\n  ");
           dom.appendChild(el1, el2);
@@ -483,11 +525,14 @@ define("borrowers/templates/friends/index", ["exports"], function (exports) {
           return el0;
         },
         buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-          var morphs = new Array(1);
-          morphs[0] = dom.createMorphAt(dom.childAt(fragment, [1]), 1, 1);
+          var element0 = dom.childAt(fragment, [1]);
+          var element1 = dom.childAt(element0, [3, 0]);
+          var morphs = new Array(2);
+          morphs[0] = dom.createMorphAt(dom.childAt(element0, [1]), 0, 0);
+          morphs[1] = dom.createElementMorph(element1);
           return morphs;
         },
-        statements: [["inline", "link-to", [["get", "friend.fullName", ["loc", [null, [8, 14], [8, 29]]]], "friends.show", ["get", "friend", ["loc", [null, [8, 45], [8, 51]]]]], [], ["loc", [null, [8, 4], [8, 53]]]]],
+        statements: [["inline", "link-to", [["get", "friend.fullName", ["loc", [null, [15, 18], [15, 33]]]], "friends.show", ["get", "friend", ["loc", [null, [15, 49], [15, 55]]]]], [], ["loc", [null, [15, 8], [15, 57]]]], ["element", "action", ["delete", ["get", "friend", ["loc", [null, [16, 38], [16, 44]]]]], [], ["loc", [null, [16, 20], [16, 46]]]]],
         locals: ["friend"],
         templates: []
       };
@@ -502,7 +547,7 @@ define("borrowers/templates/friends/index", ["exports"], function (exports) {
             "column": 0
           },
           "end": {
-            "line": 12,
+            "line": 21,
             "column": 0
           }
         },
@@ -531,10 +576,40 @@ define("borrowers/templates/friends/index", ["exports"], function (exports) {
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
-        var el1 = dom.createElement("ul");
+        var el1 = dom.createElement("table");
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("thead");
+        var el3 = dom.createTextNode("\n	 ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createElement("tr");
+        var el4 = dom.createTextNode(" \n		");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("th");
+        var el5 = dom.createTextNode("Name");
+        dom.appendChild(el4, el5);
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode(" \n		");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("th");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n    ");
+        dom.appendChild(el3, el4);
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n  ");
+        dom.appendChild(el2, el3);
+        dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n");
         dom.appendChild(el1, el2);
-        var el2 = dom.createComment("");
+        var el2 = dom.createElement("tbody");
+        var el3 = dom.createTextNode("\n");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("  ");
+        dom.appendChild(el2, el3);
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n");
         dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
@@ -545,10 +620,10 @@ define("borrowers/templates/friends/index", ["exports"], function (exports) {
         var morphs = new Array(3);
         morphs[0] = dom.createMorphAt(fragment, 2, 2, contextualElement);
         morphs[1] = dom.createMorphAt(dom.childAt(fragment, [4]), 1, 1);
-        morphs[2] = dom.createMorphAt(dom.childAt(fragment, [6]), 1, 1);
+        morphs[2] = dom.createMorphAt(dom.childAt(fragment, [6, 3]), 1, 1);
         return morphs;
       },
-      statements: [["block", "link-to", ["friends.new"], [], 0, null, ["loc", [null, [2, 0], [2, 48]]]], ["content", "model.length", ["loc", [null, [4, 19], [4, 35]]]], ["block", "each", [["get", "model", ["loc", [null, [6, 20], [6, 25]]]]], [], 1, null, ["loc", [null, [6, 2], [10, 11]]]]],
+      statements: [["block", "link-to", ["friends.new"], [], 0, null, ["loc", [null, [2, 0], [2, 48]]]], ["content", "model.length", ["loc", [null, [4, 19], [4, 35]]]], ["block", "each", [["get", "model", ["loc", [null, [13, 20], [13, 25]]]]], [], 1, null, ["loc", [null, [13, 2], [18, 11]]]]],
       locals: [],
       templates: [child0, child1]
     };
@@ -683,7 +758,7 @@ define("borrowers/templates/friends/show", ["exports"], function (exports) {
         morphs[5] = dom.createMorphAt(dom.childAt(element0, [11]), 0, 0);
         return morphs;
       },
-      statements: [["content", "model.firstName", ["loc", [null, [2, 16], [2, 35]]]], ["content", "model.lastName", ["loc", [null, [3, 15], [3, 33]]]], ["content", "model.email", ["loc", [null, [4, 11], [4, 26]]]], ["content", "model.twitter", ["loc", [null, [5, 13], [5, 30]]]], ["inline", "link-to", ["Back", "friends"], [], ["loc", [null, [6, 8], [6, 36]]]], ["inline", "link-to", ["Edit", "friends.edit", ["get", "model", ["loc", [null, [7, 40], [7, 45]]]]], [], ["loc", [null, [7, 8], [7, 47]]]]],
+      statements: [["content", "model.firstName", ["loc", [null, [2, 16], [2, 35]]]], ["content", "model.lastName", ["loc", [null, [3, 15], [3, 33]]]], ["content", "model.email", ["loc", [null, [4, 11], [4, 26]]]], ["content", "model.twitter", ["loc", [null, [5, 13], [5, 30]]]], ["inline", "link-to", ["Back", "friends"], [], ["loc", [null, [6, 8], [6, 36]]]], ["inline", "link-to", ["Edit info", "friends.edit", ["get", "model", ["loc", [null, [7, 45], [7, 50]]]]], [], ["loc", [null, [7, 8], [7, 52]]]]],
       locals: [],
       templates: []
     };
@@ -734,6 +809,97 @@ define("borrowers/templates/friends", ["exports"], function (exports) {
     };
   })());
 });
+define("borrowers/templates/partials/-header", ["exports"], function (exports) {
+  exports["default"] = Ember.HTMLBars.template((function () {
+    return {
+      meta: {
+        "revision": "Ember@1.13.11",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 1,
+            "column": 0
+          },
+          "end": {
+            "line": 13,
+            "column": 0
+          }
+        },
+        "moduleName": "borrowers/templates/partials/-header.hbs"
+      },
+      arity: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      buildFragment: function buildFragment(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createElement("nav");
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createComment("");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createComment(" responsive ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("input");
+        dom.setAttribute(el2, "id", "bmenu");
+        dom.setAttribute(el2, "class", "burgercheck");
+        dom.setAttribute(el2, "type", "checkbox");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode(" \n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("label");
+        dom.setAttribute(el2, "for", "bmenu");
+        dom.setAttribute(el2, "class", "burgermenu");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createComment(" /responsive ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("div");
+        dom.setAttribute(el2, "class", "menu");
+        var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode(" \n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode(" \n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n  ");
+        dom.appendChild(el2, el3);
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+        var element0 = dom.childAt(fragment, [0]);
+        var element1 = dom.childAt(element0, [11]);
+        var morphs = new Array(4);
+        morphs[0] = dom.createMorphAt(element0, 1, 1);
+        morphs[1] = dom.createMorphAt(element1, 1, 1);
+        morphs[2] = dom.createMorphAt(element1, 3, 3);
+        morphs[3] = dom.createMorphAt(element1, 5, 5);
+        return morphs;
+      },
+      statements: [["inline", "link-to", ["Borrowers", "index"], ["class", "main"], ["loc", [null, [2, 2], [2, 46]]]], ["inline", "link-to", ["Dashboard", "index"], ["class", "icon-gauge"], ["loc", [null, [8, 4], [8, 54]]]], ["inline", "link-to", ["Friends", "friends"], ["class", "icon-users-1"], ["loc", [null, [9, 4], [9, 56]]]], ["inline", "link-to", ["New Friend", "friends.new"], ["class", "icon-user-add"], ["loc", [null, [10, 4], [10, 64]]]]],
+      locals: [],
+      templates: []
+    };
+  })());
+});
 /* jshint ignore:start */
 
 /* jshint ignore:end */
@@ -760,7 +926,7 @@ catch(err) {
 });
 
 if (!runningTests) {
-  require("borrowers/app")["default"].create({"LOG_RESOLVER":true,"LOG_ACTIVE_GENERATION":true,"LOG_VIEW_LOOKUPS":true,"name":"borrowers","version":"0.0.0+ffd5a07a"});
+  require("borrowers/app")["default"].create({"LOG_RESOLVER":true,"LOG_ACTIVE_GENERATION":true,"LOG_VIEW_LOOKUPS":true,"name":"borrowers","version":"0.0.0+8b80f3a4"});
 }
 
 /* jshint ignore:end */
