@@ -1,1 +1,0 @@
-/Users/tsavani/twinks/ember/borrowers/client/tmp/funnel-input_base_path-JIEGaPPK.tmp/0/routes/application.js

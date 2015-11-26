@@ -1377,3 +1377,226 @@ Started GET "/friends" for 127.0.0.1 at 2015-11-24 17:51:06 +0530
 Processing by FriendsController#index as JSON
   [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
 Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 18:06:44 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.5ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 12ms (Views: 7.2ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-24 18:06:51 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"sfsfd", "last_name"=>"sdfdsf", "email"=>"dsfdsff", "twitter"=>"dsfsdd", "total_articles"=>nil}}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "friends" ("first_name", "last_name", "email", "twitter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["first_name", "sfsfd"], ["last_name", "sdfdsf"], ["email", "dsfdsff"], ["twitter", "dsfsdd"], ["created_at", "2015-11-24 12:36:51.122315"], ["updated_at", "2015-11-24 12:36:51.122315"]]
+  [1m[36m (5.6ms)[0m  [1mCOMMIT[0m
+Completed 201 Created in 14ms (Views: 1.1ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 18:06:52 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends/1" for 127.0.0.1 at 2015-11-24 18:06:58 +0530
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends/1" for 127.0.0.1 at 2015-11-24 18:07:00 +0530
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mFriend Load (0.3ms)[0m  SELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/friends/1" for 127.0.0.1 at 2015-11-24 18:07:02 +0530
+Processing by FriendsController#update as JSON
+  Parameters: {"friend"=>{"first_name"=>"dfdf", "last_name"=>"dffdsd", "email"=>"sdffd", "twitter"=>"sdfdsfsd", "total_articles"=>nil}, "id"=>"1"}
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 204 No Content in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/friends/1" for 127.0.0.1 at 2015-11-24 18:07:07 +0530
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends/1" for 127.0.0.1 at 2015-11-24 18:07:09 +0530
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mFriend Load (0.3ms)[0m  SELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends/1" for 127.0.0.1 at 2015-11-24 18:07:10 +0530
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends/1" for 127.0.0.1 at 2015-11-24 18:07:12 +0530
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mFriend Load (0.2ms)[0m  SELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/friends/1" for 127.0.0.1 at 2015-11-24 18:07:24 +0530
+Processing by FriendsController#update as JSON
+  Parameters: {"friend"=>{"first_name"=>"dfdf", "last_name"=>"dffdsd", "email"=>"savani@gmail.com", "twitter"=>"sdfdsfsd", "total_articles"=>nil}, "id"=>"1"}
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "friends" SET "email" = $1, "updated_at" = $2 WHERE "friends"."id" = $3  [["email", "savani@gmail.com"], ["updated_at", "2015-11-24 12:37:24.207745"], ["id", 1]]
+  [1m[36m (6.1ms)[0m  [1mCOMMIT[0m
+Completed 204 No Content in 10ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 18:07:26 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.4ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 18:07:31 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 18:07:33 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.2ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 18:07:37 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.4ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 18:13:45 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 18:13:46 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 18:13:51 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/friends/3" for 127.0.0.1 at 2015-11-24 18:13:55 +0530
+Processing by FriendsController#update as JSON
+  Parameters: {"friend"=>{"first_name"=>"xcvxcv", "last_name"=>"savani", "email"=>"dfdbf", "twitter"=>"dfdvdfv", "total_articles"=>nil}, "id"=>"3"}
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 204 No Content in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 18:13:57 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends/4" for 127.0.0.1 at 2015-11-24 18:14:01 +0530
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[35mFriend Load (0.2ms)[0m  SELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1  [["id", 4]]
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/friends/4" for 127.0.0.1 at 2015-11-24 18:14:03 +0530
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 18:14:08 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 18:14:23 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 18:14:24 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 19:26:11 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 19:26:11 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 19:27:02 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 19:27:07 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends.json" for ::1 at 2015-11-24 19:51:20 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.8ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 15ms (Views: 11.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/friends.json" for ::1 at 2015-11-24 20:30:28 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.4ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 20:30:30 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-24 20:30:38 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)

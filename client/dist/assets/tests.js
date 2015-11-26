@@ -3,7 +3,7 @@ define('borrowers/tests/adapters/application.jshint', ['exports'], function (exp
 
   QUnit.module('JSHint - adapters');
   QUnit.test('adapters/application.js should pass jshint', function (assert) {
-    assert.ok(true, 'adapters/application.js should pass jshint.');
+    assert.ok(false, 'adapters/application.js should pass jshint.\nadapters/application.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\nadapters/application.js: line 3, col 1, \'export\' is only available in ES6 (use esnext option).\n\n2 errors');
   });
 });
 define('borrowers/tests/app.jshint', ['exports'], function (exports) {
@@ -11,7 +11,7 @@ define('borrowers/tests/app.jshint', ['exports'], function (exports) {
 
   QUnit.module('JSHint - .');
   QUnit.test('app.js should pass jshint', function (assert) {
-    assert.ok(true, 'app.js should pass jshint.');
+    assert.ok(false, 'app.js should pass jshint.\napp.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\napp.js: line 2, col 1, \'import\' is only available in ES6 (use esnext option).\napp.js: line 3, col 1, \'import\' is only available in ES6 (use esnext option).\napp.js: line 4, col 1, \'import\' is only available in ES6 (use esnext option).\napp.js: line 6, col 1, \'let\' is available in ES6 (use esnext option) or Mozilla JS extensions (use moz).\napp.js: line 13, col 3, \'object short notation\' is available in ES6 (use esnext option) or Mozilla JS extensions (use moz).\napp.js: line 18, col 1, \'export\' is only available in ES6 (use esnext option).\n\n7 errors');
   });
 });
 define('borrowers/tests/controllers/friends/edit.jshint', ['exports'], function (exports) {
@@ -19,7 +19,7 @@ define('borrowers/tests/controllers/friends/edit.jshint', ['exports'], function 
 
   QUnit.module('JSHint - controllers/friends');
   QUnit.test('controllers/friends/edit.js should pass jshint', function (assert) {
-    assert.ok(false, 'controllers/friends/edit.js should pass jshint.\ncontrollers/friends/edit.js: line 10, col 6, Bad line breaking before \'&&\'.\n\n1 error');
+    assert.ok(false, 'controllers/friends/edit.js should pass jshint.\ncontrollers/friends/edit.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\ncontrollers/friends/edit.js: line 2, col 1, \'export\' is only available in ES6 (use esnext option).\ncontrollers/friends/edit.js: line 10, col 6, Bad line breaking before \'&&\'.\n\n3 errors');
   });
 });
 define('borrowers/tests/controllers/friends/new.jshint', ['exports'], function (exports) {
@@ -27,7 +27,7 @@ define('borrowers/tests/controllers/friends/new.jshint', ['exports'], function (
 
   QUnit.module('JSHint - controllers/friends');
   QUnit.test('controllers/friends/new.js should pass jshint', function (assert) {
-    assert.ok(false, 'controllers/friends/new.js should pass jshint.\ncontrollers/friends/new.js: line 6, col 5, Bad line breaking before \'&&\'.\n\n1 error');
+    assert.ok(false, 'controllers/friends/new.js should pass jshint.\ncontrollers/friends/new.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\ncontrollers/friends/new.js: line 3, col 1, \'export\' is only available in ES6 (use esnext option).\ncontrollers/friends/new.js: line 6, col 5, Bad line breaking before \'&&\'.\n\n3 errors');
   });
 });
 define('borrowers/tests/helpers/destroy-app', ['exports', 'ember'], function (exports, _ember) {
@@ -126,7 +126,7 @@ define('borrowers/tests/models/friend.jshint', ['exports'], function (exports) {
 
   QUnit.module('JSHint - models');
   QUnit.test('models/friend.js should pass jshint', function (assert) {
-    assert.ok(true, 'models/friend.js should pass jshint.');
+    assert.ok(false, 'models/friend.js should pass jshint.\nmodels/friend.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\nmodels/friend.js: line 2, col 1, \'import\' is only available in ES6 (use esnext option).\nmodels/friend.js: line 4, col 1, \'export\' is only available in ES6 (use esnext option).\n\n3 errors');
   });
 });
 define('borrowers/tests/router.jshint', ['exports'], function (exports) {
@@ -134,7 +134,7 @@ define('borrowers/tests/router.jshint', ['exports'], function (exports) {
 
   QUnit.module('JSHint - .');
   QUnit.test('router.js should pass jshint', function (assert) {
-    assert.ok(true, 'router.js should pass jshint.');
+    assert.ok(false, 'router.js should pass jshint.\nrouter.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\nrouter.js: line 2, col 1, \'import\' is only available in ES6 (use esnext option).\nrouter.js: line 4, col 1, \'const\' is available in ES6 (use esnext option) or Mozilla JS extensions (use moz).\nrouter.js: line 18, col 1, \'export\' is only available in ES6 (use esnext option).\n\n4 errors');
   });
 });
 define('borrowers/tests/routes/application.jshint', ['exports'], function (exports) {
@@ -142,7 +142,7 @@ define('borrowers/tests/routes/application.jshint', ['exports'], function (expor
 
   QUnit.module('JSHint - routes');
   QUnit.test('routes/application.js should pass jshint', function (assert) {
-    assert.ok(true, 'routes/application.js should pass jshint.');
+    assert.ok(false, 'routes/application.js should pass jshint.\nroutes/application.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\nroutes/application.js: line 3, col 1, \'export\' is only available in ES6 (use esnext option).\n\n2 errors');
   });
 });
 define('borrowers/tests/routes/friends/edit.jshint', ['exports'], function (exports) {
@@ -150,7 +150,7 @@ define('borrowers/tests/routes/friends/edit.jshint', ['exports'], function (expo
 
   QUnit.module('JSHint - routes/friends');
   QUnit.test('routes/friends/edit.js should pass jshint', function (assert) {
-    assert.ok(true, 'routes/friends/edit.js should pass jshint.');
+    assert.ok(false, 'routes/friends/edit.js should pass jshint.\nroutes/friends/edit.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\nroutes/friends/edit.js: line 3, col 1, \'export\' is only available in ES6 (use esnext option).\n\n2 errors');
   });
 });
 define('borrowers/tests/routes/friends/index.jshint', ['exports'], function (exports) {
@@ -158,7 +158,7 @@ define('borrowers/tests/routes/friends/index.jshint', ['exports'], function (exp
 
   QUnit.module('JSHint - routes/friends');
   QUnit.test('routes/friends/index.js should pass jshint', function (assert) {
-    assert.ok(true, 'routes/friends/index.js should pass jshint.');
+    assert.ok(false, 'routes/friends/index.js should pass jshint.\nroutes/friends/index.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\nroutes/friends/index.js: line 3, col 1, \'export\' is only available in ES6 (use esnext option).\n\n2 errors');
   });
 });
 define('borrowers/tests/routes/friends/new.jshint', ['exports'], function (exports) {
@@ -166,7 +166,7 @@ define('borrowers/tests/routes/friends/new.jshint', ['exports'], function (expor
 
   QUnit.module('JSHint - routes/friends');
   QUnit.test('routes/friends/new.js should pass jshint', function (assert) {
-    assert.ok(true, 'routes/friends/new.js should pass jshint.');
+    assert.ok(false, 'routes/friends/new.js should pass jshint.\nroutes/friends/new.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\nroutes/friends/new.js: line 3, col 1, \'export\' is only available in ES6 (use esnext option).\n\n2 errors');
   });
 });
 define('borrowers/tests/routes/friends/show.jshint', ['exports'], function (exports) {
@@ -174,7 +174,7 @@ define('borrowers/tests/routes/friends/show.jshint', ['exports'], function (expo
 
   QUnit.module('JSHint - routes/friends');
   QUnit.test('routes/friends/show.js should pass jshint', function (assert) {
-    assert.ok(true, 'routes/friends/show.js should pass jshint.');
+    assert.ok(false, 'routes/friends/show.js should pass jshint.\nroutes/friends/show.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\nroutes/friends/show.js: line 3, col 1, \'export\' is only available in ES6 (use esnext option).\n\n2 errors');
   });
 });
 define('borrowers/tests/routes/friends.jshint', ['exports'], function (exports) {
@@ -182,7 +182,7 @@ define('borrowers/tests/routes/friends.jshint', ['exports'], function (exports) 
 
   QUnit.module('JSHint - routes');
   QUnit.test('routes/friends.js should pass jshint', function (assert) {
-    assert.ok(true, 'routes/friends.js should pass jshint.');
+    assert.ok(false, 'routes/friends.js should pass jshint.\nroutes/friends.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\nroutes/friends.js: line 3, col 1, \'export\' is only available in ES6 (use esnext option).\n\n2 errors');
   });
 });
 define('borrowers/tests/test-helper', ['exports', 'borrowers/tests/helpers/resolver', 'ember-qunit'], function (exports, _borrowersTestsHelpersResolver, _emberQunit) {

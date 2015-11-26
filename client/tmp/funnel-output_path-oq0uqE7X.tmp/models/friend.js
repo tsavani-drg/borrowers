@@ -1,1 +1,0 @@
-/Users/tsavani/twinks/ember/borrowers/tmp/funnel-input_base_path-Bnr5T06S.tmp/0/models/friend.js

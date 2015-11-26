@@ -1,1 +1,0 @@
-/Users/tsavani/twinks/ember/borrowers/tmp/config_replace-output_path-e3X29vGc.tmp/vendor-suffix.js

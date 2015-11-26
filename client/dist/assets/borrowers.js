@@ -683,7 +683,7 @@ define("borrowers/templates/friends/show", ["exports"], function (exports) {
         morphs[5] = dom.createMorphAt(dom.childAt(element0, [11]), 0, 0);
         return morphs;
       },
-      statements: [["content", "model.firstName", ["loc", [null, [2, 16], [2, 35]]]], ["content", "model.lastName", ["loc", [null, [3, 15], [3, 33]]]], ["content", "model.email", ["loc", [null, [4, 11], [4, 26]]]], ["content", "model.twitter", ["loc", [null, [5, 13], [5, 30]]]], ["inline", "link-to", ["Edit", "friends.edit"], [], ["loc", [null, [6, 8], [6, 41]]]], ["inline", "link-to", ["Back", "friends"], [], ["loc", [null, [7, 8], [7, 36]]]]],
+      statements: [["content", "model.firstName", ["loc", [null, [2, 16], [2, 35]]]], ["content", "model.lastName", ["loc", [null, [3, 15], [3, 33]]]], ["content", "model.email", ["loc", [null, [4, 11], [4, 26]]]], ["content", "model.twitter", ["loc", [null, [5, 13], [5, 30]]]], ["inline", "link-to", ["Back", "friends"], [], ["loc", [null, [6, 8], [6, 36]]]], ["inline", "link-to", ["Edit", "friends.edit", ["get", "model", ["loc", [null, [7, 40], [7, 45]]]]], [], ["loc", [null, [7, 8], [7, 47]]]]],
       locals: [],
       templates: []
     };
@@ -760,7 +760,7 @@ catch(err) {
 });
 
 if (!runningTests) {
-  require("borrowers/app")["default"].create({"LOG_RESOLVER":true,"LOG_ACTIVE_GENERATION":true,"LOG_VIEW_LOOKUPS":true,"name":"borrowers","version":"0.0.0+5249df19"});
+  require("borrowers/app")["default"].create({"LOG_RESOLVER":true,"LOG_ACTIVE_GENERATION":true,"LOG_VIEW_LOOKUPS":true,"name":"borrowers","version":"0.0.0+ffd5a07a"});
 }
 
 /* jshint ignore:end */

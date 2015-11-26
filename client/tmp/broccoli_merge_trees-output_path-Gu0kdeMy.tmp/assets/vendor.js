@@ -1,1 +1,0 @@
-/Users/tsavani/twinks/ember/borrowers/tmp/concat_with_maps-output_path-1lrzpd6C.tmp/assets/vendor.js
