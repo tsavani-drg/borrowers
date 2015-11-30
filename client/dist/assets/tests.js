@@ -14,6 +14,14 @@ define('borrowers/tests/app.jshint', ['exports'], function (exports) {
     assert.ok(false, 'app.js should pass jshint.\napp.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\napp.js: line 2, col 1, \'import\' is only available in ES6 (use esnext option).\napp.js: line 3, col 1, \'import\' is only available in ES6 (use esnext option).\napp.js: line 4, col 1, \'import\' is only available in ES6 (use esnext option).\napp.js: line 6, col 1, \'let\' is available in ES6 (use esnext option) or Mozilla JS extensions (use moz).\napp.js: line 13, col 3, \'object short notation\' is available in ES6 (use esnext option) or Mozilla JS extensions (use moz).\napp.js: line 18, col 1, \'export\' is only available in ES6 (use esnext option).\n\n7 errors');
   });
 });
+define('borrowers/tests/controllers/articles/new.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - controllers/articles');
+  QUnit.test('controllers/articles/new.js should pass jshint', function (assert) {
+    assert.ok(false, 'controllers/articles/new.js should pass jshint.\ncontrollers/articles/new.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\ncontrollers/articles/new.js: line 3, col 1, \'export\' is only available in ES6 (use esnext option).\n\n2 errors');
+  });
+});
 define('borrowers/tests/controllers/friends/base.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -129,6 +137,14 @@ define('borrowers/tests/helpers/start-app.jshint', ['exports'], function (export
     assert.ok(true, 'helpers/start-app.js should pass jshint.');
   });
 });
+define('borrowers/tests/models/article.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - models');
+  QUnit.test('models/article.js should pass jshint', function (assert) {
+    assert.ok(false, 'models/article.js should pass jshint.\nmodels/article.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\nmodels/article.js: line 3, col 1, \'export\' is only available in ES6 (use esnext option).\n\n2 errors');
+  });
+});
 define('borrowers/tests/models/friend.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -142,7 +158,7 @@ define('borrowers/tests/router.jshint', ['exports'], function (exports) {
 
   QUnit.module('JSHint - .');
   QUnit.test('router.js should pass jshint', function (assert) {
-    assert.ok(false, 'router.js should pass jshint.\nrouter.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\nrouter.js: line 2, col 1, \'import\' is only available in ES6 (use esnext option).\nrouter.js: line 4, col 1, \'const\' is available in ES6 (use esnext option) or Mozilla JS extensions (use moz).\nrouter.js: line 18, col 1, \'export\' is only available in ES6 (use esnext option).\n\n4 errors');
+    assert.ok(false, 'router.js should pass jshint.\nrouter.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\nrouter.js: line 2, col 1, \'import\' is only available in ES6 (use esnext option).\nrouter.js: line 4, col 1, \'const\' is available in ES6 (use esnext option) or Mozilla JS extensions (use moz).\nrouter.js: line 22, col 1, \'export\' is only available in ES6 (use esnext option).\n\n4 errors');
   });
 });
 define('borrowers/tests/routes/application.jshint', ['exports'], function (exports) {
@@ -151,6 +167,30 @@ define('borrowers/tests/routes/application.jshint', ['exports'], function (expor
   QUnit.module('JSHint - routes');
   QUnit.test('routes/application.js should pass jshint', function (assert) {
     assert.ok(false, 'routes/application.js should pass jshint.\nroutes/application.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\nroutes/application.js: line 3, col 1, \'export\' is only available in ES6 (use esnext option).\n\n2 errors');
+  });
+});
+define('borrowers/tests/routes/articles/index.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - routes/articles');
+  QUnit.test('routes/articles/index.js should pass jshint', function (assert) {
+    assert.ok(false, 'routes/articles/index.js should pass jshint.\nroutes/articles/index.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\nroutes/articles/index.js: line 3, col 1, \'export\' is only available in ES6 (use esnext option).\n\n2 errors');
+  });
+});
+define('borrowers/tests/routes/articles/new.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - routes/articles');
+  QUnit.test('routes/articles/new.js should pass jshint', function (assert) {
+    assert.ok(false, 'routes/articles/new.js should pass jshint.\nroutes/articles/new.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\nroutes/articles/new.js: line 3, col 1, \'export\' is only available in ES6 (use esnext option).\n\n2 errors');
+  });
+});
+define('borrowers/tests/routes/articles.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - routes');
+  QUnit.test('routes/articles.js should pass jshint', function (assert) {
+    assert.ok(false, 'routes/articles.js should pass jshint.\nroutes/articles.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\nroutes/articles.js: line 3, col 1, \'export\' is only available in ES6 (use esnext option).\n\n2 errors');
   });
 });
 define('borrowers/tests/routes/friends/edit.jshint', ['exports'], function (exports) {
@@ -289,6 +329,27 @@ define('borrowers/tests/unit/controllers/friends/new-test.jshint', ['exports'], 
     assert.ok(true, 'unit/controllers/friends/new-test.js should pass jshint.');
   });
 });
+define('borrowers/tests/unit/models/article-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForModel)('article', 'Unit | Model | article', {
+    // Specify the other units that are required for this test.
+    needs: []
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var model = this.subject();
+    // let store = this.store();
+    assert.ok(!!model);
+  });
+});
+define('borrowers/tests/unit/models/article-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - unit/models');
+  QUnit.test('unit/models/article-test.js should pass jshint', function (assert) {
+    assert.ok(true, 'unit/models/article-test.js should pass jshint.');
+  });
+});
 define('borrowers/tests/unit/models/friend-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
 
   (0, _emberQunit.moduleForModel)('friend', 'Unit | Model | friend', {
@@ -308,6 +369,46 @@ define('borrowers/tests/unit/models/friend-test.jshint', ['exports'], function (
   QUnit.module('JSHint - unit/models');
   QUnit.test('unit/models/friend-test.js should pass jshint', function (assert) {
     assert.ok(true, 'unit/models/friend-test.js should pass jshint.');
+  });
+});
+define('borrowers/tests/unit/routes/articles/index-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:articles/index', 'Unit | Route | articles/index', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('borrowers/tests/unit/routes/articles/index-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - unit/routes/articles');
+  QUnit.test('unit/routes/articles/index-test.js should pass jshint', function (assert) {
+    assert.ok(true, 'unit/routes/articles/index-test.js should pass jshint.');
+  });
+});
+define('borrowers/tests/unit/routes/articles-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:articles', 'Unit | Route | articles', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('borrowers/tests/unit/routes/articles-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - unit/routes');
+  QUnit.test('unit/routes/articles-test.js should pass jshint', function (assert) {
+    assert.ok(true, 'unit/routes/articles-test.js should pass jshint.');
   });
 });
 define('borrowers/tests/unit/routes/friends/edit-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {

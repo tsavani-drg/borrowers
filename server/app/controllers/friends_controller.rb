@@ -5,8 +5,8 @@ class FriendsController < ApplicationController
   # GET /friends.json
   def index
     @friends = Friend.all
-
-    render json: @friends
+    
+    render json: @friends 
   end
 
   # GET /friends/1
@@ -54,6 +54,6 @@ class FriendsController < ApplicationController
     end
 
     def friend_params
-      params.require(:friend).permit(:first_name, :last_name, :email, :twitter, :total_articles)
+      params.require(:friend).permit(:first_name, :last_name, :email, :twitter)
     end
 end

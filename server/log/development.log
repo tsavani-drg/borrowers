@@ -2520,3 +2520,1771 @@ Started GET "/friends" for 127.0.0.1 at 2015-11-26 20:35:38 +0530
 Processing by FriendsController#index as JSON
   [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
 Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-27 12:35:37 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (26.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (18.7ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 37ms (Views: 9.2ms | ActiveRecord: 26.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-27 12:36:36 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.4ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-27 12:36:37 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-27 12:36:47 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-27 12:39:11 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-27 12:39:33 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-27 12:39:37 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-27 12:39:44 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.4ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/friends/8" for 127.0.0.1 at 2015-11-27 12:39:48 +0530
+Processing by FriendsController#destroy as JSON
+  Parameters: {"id"=>"8"}
+  [1m[35mFriend Load (2.1ms)[0m  SELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (6.4ms)[0m  DELETE FROM "friends" WHERE "friends"."id" = $1  [["id", 8]]
+  [1m[36m (6.2ms)[0m  [1mCOMMIT[0m
+Completed 204 No Content in 59ms (ActiveRecord: 15.0ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-27 13:09:54 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-27 13:11:51 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-27 13:11:51 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-27 13:12:26 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-27 13:12:27 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-27 13:14:00 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateArticles (20151127083627)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (19.5ms)[0m  [1mCREATE TABLE "articles" ("id" serial primary key, "friend_id" integer, "description" character varying, "notes" character varying, "state" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX  "index_articles_on_friend_id" ON "articles"  ("friend_id")
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151127083627"]]
+  [1m[35m (6.3ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (4.2ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'articles'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'friends'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/" for ::1 at 2015-11-29 22:13:20 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (27.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/tsavani/twinks/ember/borrowers/server/app/models/friend.rb:2: syntax error, unexpected ':', expecting keyword_end
+  has_many: article
+           ^):
+  app/models/friend.rb:2: syntax error, unexpected ':', expecting keyword_end
+  app/controllers/friends_controller.rb:7:in `index'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.2ms)
+
+
+Started GET "/" for ::1 at 2015-11-29 22:14:32 +0530
+Processing by FriendsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/tsavani/twinks/ember/borrowers/server/app/models/friend.rb:2: syntax error, unexpected ':', expecting keyword_end
+  has_many: :article
+           ^):
+  app/models/friend.rb:2: syntax error, unexpected ':', expecting keyword_end
+  app/controllers/friends_controller.rb:7:in `index'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (12.6ms)
+
+
+Started GET "/" for ::1 at 2015-11-29 22:14:51 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/tsavani/twinks/ember/borrowers/server/app/models/friend.rb:2: syntax error, unexpected ':', expecting keyword_end
+  has_many: :article
+           ^):
+  app/models/friend.rb:2: syntax error, unexpected ':', expecting keyword_end
+  app/controllers/friends_controller.rb:7:in `index'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.1ms)
+
+
+Started GET "/" for ::1 at 2015-11-29 22:15:30 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#index as HTML
+  [1m[35mFriend Load (22.9ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 73ms (Views: 8.6ms | ActiveRecord: 29.5ms)
+
+
+Started GET "/friends" for ::1 at 2015-11-29 22:15:41 +0530
+Processing by FriendsController#index as HTML
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-29 22:18:16 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.5ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 40ms (Views: 33.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-29 22:18:17 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.4ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-11-29 22:18:27 +0530
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"created_at"=>nil, "description"=>"sdsd", "notes"=>"ddfaas", "state"=>"borrowed", "friend_id"=>"3"}}
+Unpermitted parameters: created_at, friend_id
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (23.8ms)[0m  [1mINSERT INTO "articles" ("description", "notes", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "sdsd"], ["notes", "ddfaas"], ["state", "borrowed"], ["created_at", "2015-11-29 16:48:27.970228"], ["updated_at", "2015-11-29 16:48:27.970228"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Completed 201 Created in 44ms (Views: 2.7ms | ActiveRecord: 26.6ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-29 22:18:30 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-29 22:18:33 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-11-29 22:18:41 +0530
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"created_at"=>nil, "description"=>"asdads", "notes"=>"ddsdfdfd", "state"=>"borrowed", "friend_id"=>"3"}}
+Unpermitted parameters: created_at, friend_id
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "articles" ("description", "notes", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["description", "asdads"], ["notes", "ddsdfdfd"], ["state", "borrowed"], ["created_at", "2015-11-29 16:48:41.516760"], ["updated_at", "2015-11-29 16:48:41.516760"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+Completed 201 Created in 5ms (Views: 0.6ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-11-29 22:18:49 +0530
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"created_at"=>nil, "description"=>"asdasdasdasd", "notes"=>"dasdasdasd", "state"=>"borrowed", "friend_id"=>"3"}}
+Unpermitted parameters: created_at, friend_id
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "articles" ("description", "notes", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "asdasdasdasd"], ["notes", "dasdasdasd"], ["state", "borrowed"], ["created_at", "2015-11-29 16:48:49.008118"], ["updated_at", "2015-11-29 16:48:49.008118"]]
+  [1m[35m (2.0ms)[0m  COMMIT
+Completed 201 Created in 5ms (Views: 0.6ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-11-29 22:18:57 +0530
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"created_at"=>nil, "description"=>"adsdssa", "notes"=>"dasdasd", "state"=>"borrowed", "friend_id"=>"3"}}
+Unpermitted parameters: created_at, friend_id
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "articles" ("description", "notes", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["description", "adsdssa"], ["notes", "dasdasd"], ["state", "borrowed"], ["created_at", "2015-11-29 16:48:57.803558"], ["updated_at", "2015-11-29 16:48:57.803558"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+Completed 201 Created in 5ms (Views: 0.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-29 22:19:00 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-29 22:19:05 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-29 22:19:07 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.2ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-29 22:19:10 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/friends/3" for 127.0.0.1 at 2015-11-29 22:19:12 +0530
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mFriend Load (1.7ms)[0m  SELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 7ms (Views: 0.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/friends" for ::1 at 2015-11-29 22:19:45 +0530
+Processing by FriendsController#index as HTML
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for ::1 at 2015-11-29 22:19:49 +0530
+Processing by FriendsController#index as HTML
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends/3/articles" for ::1 at 2015-11-29 22:19:56 +0530
+
+ActionController::RoutingError (No route matches [GET] "/friends/3/articles"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (44.2ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (69.9ms)
+
+
+Started GET "/friends/articles" for ::1 at 2015-11-29 22:20:02 +0530
+Processing by FriendsController#show as HTML
+  Parameters: {"id"=>"articles"}
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.3ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Friend with 'id'=articles):
+  app/controllers/friends_controller.rb:53:in `set_friend'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (30.0ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (41.7ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-29 22:21:12 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends/3" for 127.0.0.1 at 2015-11-29 22:28:43 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mFriend Load (0.5ms)[0m  SELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 19ms (Views: 1.8ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/friends/3/articles" for ::1 at 2015-11-29 22:28:43 +0530
+Processing by ArticlesController#index as HTML
+  Parameters: {"friend_id"=>"3"}
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Completed 200 OK in 12ms (Views: 6.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/friends" for ::1 at 2015-11-29 22:28:47 +0530
+Processing by FriendsController#index as HTML
+  [1m[35mFriend Load (0.4ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/friends" for ::1 at 2015-11-29 22:31:25 +0530
+
+SyntaxError (/Users/tsavani/twinks/ember/borrowers/server/app/controllers/friends_controller.rb:9: syntax error, unexpected tIVAR, expecting keyword_end):
+  app/controllers/friends_controller.rb:9: syntax error, unexpected tIVAR, expecting keyword_end
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (11.9ms)
+
+
+Started GET "/friends" for ::1 at 2015-11-29 22:32:10 +0530
+
+SyntaxError (/Users/tsavani/twinks/ember/borrowers/server/app/controllers/friends_controller.rb:9: syntax error, unexpected '\n', expecting =>
+/Users/tsavani/twinks/ember/borrowers/server/app/controllers/friends_controller.rb:59: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/friends_controller.rb:9: syntax error, unexpected '\n', expecting =>
+  app/controllers/friends_controller.rb:59: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (29.0ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (38.0ms)
+
+
+Started GET "/friends" for ::1 at 2015-11-29 22:32:24 +0530
+
+SyntaxError (/Users/tsavani/twinks/ember/borrowers/server/app/controllers/friends_controller.rb:9: syntax error, unexpected tIVAR, expecting ']'
+    render json: [@friends @articles]
+                                    ^
+/Users/tsavani/twinks/ember/borrowers/server/app/controllers/friends_controller.rb:59: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/friends_controller.rb:9: syntax error, unexpected tIVAR, expecting ']'
+  app/controllers/friends_controller.rb:59: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.6ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (11.4ms)
+
+
+Started GET "/friends" for ::1 at 2015-11-29 22:34:37 +0530
+
+SyntaxError (/Users/tsavani/twinks/ember/borrowers/server/app/controllers/friends_controller.rb:9: syntax error, unexpected tIVAR, expecting =>
+    render json: {@friends @articles}
+                                    ^
+/Users/tsavani/twinks/ember/borrowers/server/app/controllers/friends_controller.rb:59: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/friends_controller.rb:9: syntax error, unexpected tIVAR, expecting =>
+  app/controllers/friends_controller.rb:59: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (12.3ms)
+
+
+Started GET "/friends" for ::1 at 2015-11-29 22:35:31 +0530
+Processing by FriendsController#index as HTML
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 2.3ms)
+  [1m[36mFriend Load (0.6ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+  [1m[35mArticle Load (0.9ms)[0m  SELECT "articles".* FROM "articles"
+  [1m[36mFriend Load (0.6ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+  [1m[35mFriend Load (1.2ms)[0m  SELECT "friends".* FROM "friends" INNER JOIN "articles" ON "articles"."friend_id" = "friends"."id"
+
+
+Started GET "/friends/3/article" for ::1 at 2015-11-29 22:47:46 +0530
+
+ActionController::RoutingError (No route matches [GET] "/friends/3/article"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.4ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (18.5ms)
+
+
+Started GET "/friends/3/articles" for ::1 at 2015-11-29 22:47:49 +0530
+Processing by ArticlesController#index as HTML
+  Parameters: {"friend_id"=>"3"}
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/friends/3/articles" for ::1 at 2015-11-29 22:49:25 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  Parameters: {"friend_id"=>"3"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/friends/3/articles" for ::1 at 2015-11-29 22:50:10 +0530
+Processing by ArticlesController#index as HTML
+  Parameters: {"friend_id"=>"3"}
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Completed 200 OK in 10ms (Views: 5.6ms | ActiveRecord: 2.4ms)
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.4ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = $1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = $1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles"
+
+
+Started GET "/friends/3" for 127.0.0.1 at 2015-11-29 22:52:36 +0530
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mFriend Load (0.2ms)[0m  SELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 46ms (Views: 1.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-29 22:52:40 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-29 22:53:05 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-11-29 22:53:14 +0530
+
+ActionController::RoutingError (No route matches [POST] "/articles"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (4.2ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-11-29 22:53:16 +0530
+
+ActionController::RoutingError (No route matches [POST] "/articles"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.3ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (2.9ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-11-29 22:53:17 +0530
+
+ActionController::RoutingError (No route matches [POST] "/articles"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.3ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (2.9ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-11-29 22:53:18 +0530
+
+ActionController::RoutingError (No route matches [POST] "/articles"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.3ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (3.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-11-29 22:53:18 +0530
+
+ActionController::RoutingError (No route matches [POST] "/articles"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.3ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (2.8ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-11-29 22:53:18 +0530
+
+ActionController::RoutingError (No route matches [POST] "/articles"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.3ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (2.7ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-11-29 22:53:18 +0530
+
+ActionController::RoutingError (No route matches [POST] "/articles"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.3ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (2.7ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-11-29 22:53:18 +0530
+
+ActionController::RoutingError (No route matches [POST] "/articles"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (3.5ms)
+
+
+Started GET "/friends/3" for 127.0.0.1 at 2015-11-29 22:54:59 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mFriend Load (0.5ms)[0m  SELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 18ms (Views: 2.1ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-11-29 22:55:05 +0530
+
+ActionController::RoutingError (No route matches [POST] "/articles"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.3ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (3.3ms)
+
+
+Started GET "/friends/3" for 127.0.0.1 at 2015-11-29 22:55:29 +0530
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-11-29 22:55:40 +0530
+
+ActionController::RoutingError (No route matches [POST] "/articles"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tsavani/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (3.9ms)
+
+
+Started GET "/friends/3" for 127.0.0.1 at 2015-11-29 22:56:31 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mFriend Load (0.7ms)[0m  SELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 21ms (Views: 2.0ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-11-29 22:56:36 +0530
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"created_at"=>nil, "description"=>"sdffadf", "notes"=>"sdsd", "state"=>"borrowed", "friend_id"=>"3"}}
+Unpermitted parameters: created_at, friend_id
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "articles" ("description", "notes", "state", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["description", "sdffadf"], ["notes", "sdsd"], ["state", "borrowed"], ["created_at", "2015-11-29 17:26:36.314885"], ["updated_at", "2015-11-29 17:26:36.314885"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+Completed 201 Created in 17ms (Views: 2.4ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-29 22:56:39 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.2ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/friends/3" for 127.0.0.1 at 2015-11-29 22:56:44 +0530
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = $1  [["id", 5]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles"
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-29 22:59:22 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 11ms (Views: 6.4ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-11-29 22:59:30 +0530
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"created_at"=>nil, "description"=>"adadasd", "notes"=>"dsadasdad", "state"=>"borrowed", "friend_id"=>"3"}}
+Unpermitted parameter: created_at
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "articles" ("description", "notes", "state", "friend_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["description", "adadasd"], ["notes", "dsadasdad"], ["state", "borrowed"], ["friend_id", 3], ["created_at", "2015-11-29 17:29:30.703410"], ["updated_at", "2015-11-29 17:29:30.703410"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+Completed 201 Created in 13ms (Views: 1.8ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-29 22:59:33 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-29 22:59:50 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+
+
+Started GET "/friends/3" for 127.0.0.1 at 2015-11-29 23:00:23 +0530
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mFriend Load (0.3ms)[0m  SELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/friends" for ::1 at 2015-11-29 23:04:22 +0530
+Processing by FriendsController#index as HTML
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles"
+Completed 200 OK in 49ms (Views: 10.3ms | ActiveRecord: 4.0ms)
+  [1m[35mFriend Load (0.7ms)[0m  SELECT "friends".* FROM "friends"
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(DISTINCT article.id) AS count_article_id, friend.id AS friend_id FROM "friends" LEFT OUTER JOIN "articles" ON "articles"."friend_id" = "friends"."id" GROUP BY friend.id
+PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "article"
+LINE 1: SELECT COUNT(DISTINCT article.id) AS count_article_id, frien...
+                              ^
+: SELECT COUNT(DISTINCT article.id) AS count_article_id, friend.id AS friend_id FROM "friends" LEFT OUTER JOIN "articles" ON "articles"."friend_id" = "friends"."id" GROUP BY friend.id
+  [1m[36m (3.6ms)[0m  [1mSELECT COUNT(DISTINCT articles.id) AS count_articles_id, friend.id AS friend_id FROM "friends" LEFT OUTER JOIN "articles" ON "articles"."friend_id" = "friends"."id" GROUP BY friend.id[0m
+PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "friend"
+LINE 1: ...COUNT(DISTINCT articles.id) AS count_articles_id, friend.id ...
+                                                             ^
+: SELECT COUNT(DISTINCT articles.id) AS count_articles_id, friend.id AS friend_id FROM "friends" LEFT OUTER JOIN "articles" ON "articles"."friend_id" = "friends"."id" GROUP BY friend.id
+  [1m[35m (3.4ms)[0m  SELECT COUNT(DISTINCT articles.id) AS count_articles_id, friends.id AS friends_id FROM "friends" LEFT OUTER JOIN "articles" ON "articles"."friend_id" = "friends"."id" GROUP BY friends.id
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(DISTINCT articles.id) AS count_articles_id, friends.id AS friends_id FROM "friends" LEFT OUTER JOIN "articles" ON "articles"."friend_id" = "friends"."id" GROUP BY friends.id[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) AS count_all, friends.id AS friends_id FROM "friends" GROUP BY friends.id
+  [1m[36mFriend Load (2.8ms)[0m  [1mSELECT "friends".* FROM "friends" GROUP BY friends.id[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" IN (6, 3, 7)
+  [1m[36mFriend Load (0.6ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" IN (3, 6, 7)
+  [1m[36mFriend Load (0.5ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" IN (3, 6, 7)
+
+
+Started GET "/friends" for ::1 at 2015-11-29 23:14:01 +0530
+Processing by FriendsController#index as HTML
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+Completed 200 OK in 17ms (Views: 9.9ms | ActiveRecord: 3.8ms)
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(DISTINCT articles.id) AS count_articles_id, friends.id AS friends_id FROM "friends" LEFT OUTER JOIN "articles" ON "articles"."friend_id" = "friends"."id" GROUP BY friends.id[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(DISTINCT articles.id) AS count_articles_id, friends.id AS friends_id FROM "friends" LEFT OUTER JOIN "articles" ON "articles"."friend_id" = "friends"."id" GROUP BY friends.id
+  [1m[36mFriend Load (0.5ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" IN (3, 6, 7)
+  [1m[36mFriend Load (0.5ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" IN (3, 6, 7)
+  [1m[36mFriend Load (0.5ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" IN (3, 6, 7)
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1[0m  [["id", nil]]
+  [1m[35mFriend Load (0.5ms)[0m  SELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mFriend Load (0.5ms)[0m  [1mSELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1[0m  [["id", 3]]
+
+
+Started GET "/friends" for ::1 at 2015-11-29 23:42:27 +0530
+Processing by FriendsController#index as HTML
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+Completed 200 OK in 17ms (Views: 10.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/friends" for ::1 at 2015-11-29 23:42:46 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#index as HTML
+  [1m[35mFriend Load (0.5ms)[0m  SELECT "friends".* FROM "friends"
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Completed 200 OK in 53ms (Views: 42.3ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/friends/3" for 127.0.0.1 at 2015-11-29 23:42:49 +0530
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mFriend Load (0.3ms)[0m  SELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
+
+NoMethodError (undefined method `embed' for FriendSerializer:Class):
+  app/serializers/friend_serializer.rb:3:in `<class:FriendSerializer>'
+  app/serializers/friend_serializer.rb:1:in `<top (required)>'
+  app/controllers/friends_controller.rb:17:in `show'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (11.6ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-30 00:50:06 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#index as JSON
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 2.4ms)
+
+NoMethodError (undefined method `counter_culture' for #<Class:0x007fa85eb51680>):
+  app/models/article.rb:6:in `<class:Article>'
+  app/models/article.rb:1:in `<top (required)>'
+  app/controllers/friends_controller.rb:8:in `index'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (10.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-30 00:50:08 +0530
+Processing by FriendsController#index as JSON
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 4.7ms)
+
+NoMethodError (undefined method `counter_culture' for #<Class:0x007fa85efe0638>):
+  app/models/article.rb:6:in `<class:Article>'
+  app/models/article.rb:1:in `<top (required)>'
+  app/controllers/friends_controller.rb:8:in `index'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.4ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (9.6ms)
+  [1m[36m (4.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateFriends (20151124082110)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (5.0ms)[0m  [1mCREATE TABLE "friends" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "twitter" character varying, "total_articles" integer DEFAULT 0 NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151124082110"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateArticles (20151127083627)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (3.8ms)[0m  [1mCREATE TABLE "articles" ("id" serial primary key, "friend_id" integer, "description" character varying, "notes" character varying, "state" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX  "index_articles_on_friend_id" ON "articles"  ("friend_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151127083627"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (3.9ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'articles'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'friends'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-30 00:55:00 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#index as JSON
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 2.4ms)
+
+NoMethodError (undefined method `counter_culture' for #<Class:0x007ff1a8ca0818>):
+  app/models/article.rb:6:in `<class:Article>'
+  app/models/article.rb:1:in `<top (required)>'
+  app/controllers/friends_controller.rb:8:in `index'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.1ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.4ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (10.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-30 00:56:10 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#index as JSON
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 2.3ms)
+
+NoMethodError (undefined method `counter_culture' for #<Class:0x007fb5d5110b10>):
+  app/models/article.rb:6:in `<class:Article>'
+  app/models/article.rb:1:in `<top (required)>'
+  app/controllers/friends_controller.rb:8:in `index'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (10.2ms)
+
+
+Started GET "/friends" for ::1 at 2015-11-30 12:23:11 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (25.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#index as HTML
+  [1m[35mFriend Load (19.7ms)[0m  SELECT "friends".* FROM "friends"
+  [1m[36mArticle Load (1.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Completed 200 OK in 36ms (Views: 3.8ms | ActiveRecord: 24.4ms)
+
+
+Started GET "/" for ::1 at 2015-11-30 12:23:18 +0530
+Processing by FriendsController#index as HTML
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-30 12:25:59 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.7ms)[0m  SELECT "friends".* FROM "friends"
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+Completed 200 OK in 40ms (Views: 2.8ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-30 12:26:06 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"sadasdas", "last_name"=>"dfds", "email"=>"fdsfdsf", "twitter"=>"dssdfdsf", "total_articles"=>nil}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (18.3ms)[0m  [1mINSERT INTO "friends" ("first_name", "last_name", "email", "twitter", "total_articles", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "sadasdas"], ["last_name", "dfds"], ["email", "fdsfdsf"], ["twitter", "dssdfdsf"], ["total_articles", nil], ["created_at", "2015-11-30 06:56:06.352006"], ["updated_at", "2015-11-30 06:56:06.352006"]]
+PG::NotNullViolation: ERROR:  null value in column "total_articles" violates not-null constraint
+DETAIL:  Failing row contains (1, sadasdas, dfds, fdsfdsf, dssdfdsf, null, 2015-11-30 06:56:06.352006, 2015-11-30 06:56:06.352006).
+: INSERT INTO "friends" ("first_name", "last_name", "email", "twitter", "total_articles", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 58.6ms)
+
+ActiveRecord::StatementInvalid (PG::NotNullViolation: ERROR:  null value in column "total_articles" violates not-null constraint
+DETAIL:  Failing row contains (1, sadasdas, dfds, fdsfdsf, dssdfdsf, null, 2015-11-30 06:56:06.352006, 2015-11-30 06:56:06.352006).
+: INSERT INTO "friends" ("first_name", "last_name", "email", "twitter", "total_articles", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"):
+  app/controllers/friends_controller.rb:25:in `create'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (15.5ms)
+  [1m[36m (8.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateFriends (20151124082110)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.8ms)[0m  [1mCREATE TABLE "friends" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "twitter" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151124082110"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateArticles (20151127083627)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "articles" ("id" serial primary key, "friend_id" integer, "description" character varying, "notes" character varying, "state" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.6ms)[0m  CREATE  INDEX  "index_articles_on_friend_id" ON "articles"  ("friend_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151127083627"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to AddTotalArticlesToFriends (20151130070006)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (4.5ms)[0m  ALTER TABLE "friends" ADD "total_articles" integer DEFAULT 0 NOT NULL
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151130070006"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (3.9ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'articles'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'friends'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36m (5.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateFriends (20151124082110)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.8ms)[0m  [1mCREATE TABLE "friends" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "twitter" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151124082110"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Migrating to CreateArticles (20151127083627)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE "articles" ("id" serial primary key, "friend_id" integer, "description" character varying, "notes" character varying, "state" character varying DEFAULT 'borrowed', "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.6ms)[0m  CREATE  INDEX  "index_articles_on_friend_id" ON "articles"  ("friend_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151127083627"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to AddTotalArticlesToFriends (20151130070006)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (4.5ms)[0m  ALTER TABLE "friends" ADD "total_articles" integer DEFAULT 0 NOT NULL
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151130070006"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (3.9ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'articles'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'friends'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-30 12:32:43 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"sadasdas", "last_name"=>"dfds", "email"=>"fdsfdsf", "twitter"=>"dssdfdsf", "total_articles"=>nil}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "friends" ("first_name", "last_name", "email", "twitter", "total_articles", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "sadasdas"], ["last_name", "dfds"], ["email", "fdsfdsf"], ["twitter", "dssdfdsf"], ["total_articles", nil], ["created_at", "2015-11-30 07:02:43.705360"], ["updated_at", "2015-11-30 07:02:43.705360"]]
+PG::NotNullViolation: ERROR:  null value in column "total_articles" violates not-null constraint
+DETAIL:  Failing row contains (1, sadasdas, dfds, fdsfdsf, dssdfdsf, 2015-11-30 07:02:43.70536, 2015-11-30 07:02:43.70536, null).
+: INSERT INTO "friends" ("first_name", "last_name", "email", "twitter", "total_articles", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 7.0ms)
+
+ActiveRecord::StatementInvalid (PG::NotNullViolation: ERROR:  null value in column "total_articles" violates not-null constraint
+DETAIL:  Failing row contains (1, sadasdas, dfds, fdsfdsf, dssdfdsf, 2015-11-30 07:02:43.70536, 2015-11-30 07:02:43.70536, null).
+: INSERT INTO "friends" ("first_name", "last_name", "email", "twitter", "total_articles", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"):
+  app/controllers/friends_controller.rb:25:in `create'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.6ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (11.4ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-30 12:33:20 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.4ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+Completed 200 OK in 7ms (Views: 2.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-30 12:33:23 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-30 12:33:29 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"sadad", "last_name"=>"dadads", "email"=>"ddaad", "twitter"=>"dasdadsd", "total_articles"=>nil}}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "friends" ("first_name", "last_name", "email", "twitter", "total_articles", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["first_name", "sadad"], ["last_name", "dadads"], ["email", "ddaad"], ["twitter", "dasdadsd"], ["total_articles", nil], ["created_at", "2015-11-30 07:03:29.868571"], ["updated_at", "2015-11-30 07:03:29.868571"]]
+PG::NotNullViolation: ERROR:  null value in column "total_articles" violates not-null constraint
+DETAIL:  Failing row contains (2, sadad, dadads, ddaad, dasdadsd, 2015-11-30 07:03:29.868571, 2015-11-30 07:03:29.868571, null).
+: INSERT INTO "friends" ("first_name", "last_name", "email", "twitter", "total_articles", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.5ms)
+
+ActiveRecord::StatementInvalid (PG::NotNullViolation: ERROR:  null value in column "total_articles" violates not-null constraint
+DETAIL:  Failing row contains (2, sadad, dadads, ddaad, dasdadsd, 2015-11-30 07:03:29.868571, 2015-11-30 07:03:29.868571, null).
+: INSERT INTO "friends" ("first_name", "last_name", "email", "twitter", "total_articles", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"):
+  app/controllers/friends_controller.rb:25:in `create'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (10.6ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-30 12:35:03 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"sadad", "last_name"=>"dadads", "email"=>"ddaad", "twitter"=>"dasdadsd", "total_articles"=>nil}}
+Unpermitted parameter: total_articles
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "friends" ("first_name", "last_name", "email", "twitter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "sadad"], ["last_name", "dadads"], ["email", "ddaad"], ["twitter", "dasdadsd"], ["created_at", "2015-11-30 07:05:03.135173"], ["updated_at", "2015-11-30 07:05:03.135173"]]
+  [1m[35m (2.8ms)[0m  COMMIT
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 5.4ms)
+
+NoMethodError (undefined method `embed' for FriendSerializer:Class):
+  app/serializers/friend_serializer.rb:3:in `<class:FriendSerializer>'
+  app/serializers/friend_serializer.rb:1:in `<top (required)>'
+  app/controllers/friends_controller.rb:26:in `create'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (10.1ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-30 12:35:28 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"asdasdasdasdada", "last_name"=>"dssdf", "email"=>"dsfdf", "twitter"=>"fdsfsdf", "total_articles"=>nil}}
+Unpermitted parameter: total_articles
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "friends" ("first_name", "last_name", "email", "twitter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "asdasdasdasdada"], ["last_name", "dssdf"], ["email", "dsfdf"], ["twitter", "fdsfsdf"], ["created_at", "2015-11-30 07:05:28.311916"], ["updated_at", "2015-11-30 07:05:28.311916"]]
+  [1m[35m (1.9ms)[0m  COMMIT
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 6.3ms)
+
+NoMethodError (undefined method `embed' for FriendSerializer:Class):
+  app/serializers/friend_serializer.rb:3:in `<class:FriendSerializer>'
+  app/serializers/friend_serializer.rb:1:in `<top (required)>'
+  app/controllers/friends_controller.rb:26:in `create'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.6ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (10.4ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-30 12:35:57 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"asdasdasdasdada", "last_name"=>"dssdf", "email"=>"dsfdf", "twitter"=>"fdsfsdf", "total_articles"=>nil}}
+Unpermitted parameter: total_articles
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "friends" ("first_name", "last_name", "email", "twitter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["first_name", "asdasdasdasdada"], ["last_name", "dssdf"], ["email", "dsfdf"], ["twitter", "fdsfsdf"], ["created_at", "2015-11-30 07:05:57.713317"], ["updated_at", "2015-11-30 07:05:57.713317"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 2.8ms)
+
+NoMethodError (undefined method `articles' for #<Friend:0x007ff198098940>):
+  app/controllers/friends_controller.rb:26:in `create'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (10.7ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-30 12:36:47 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"sd", "last_name"=>"ssdsd", "email"=>"sds", "twitter"=>"sdsd", "total_articles"=>nil}}
+Unpermitted parameter: total_articles
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "friends" ("first_name", "last_name", "email", "twitter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "sd"], ["last_name", "ssdsd"], ["email", "sds"], ["twitter", "sdsd"], ["created_at", "2015-11-30 07:06:47.641962"], ["updated_at", "2015-11-30 07:06:47.641962"]]
+  [1m[35m (1.9ms)[0m  COMMIT
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 4.2ms)
+
+NoMethodError (undefined method `articles' for #<Friend:0x007ff1987d1ba8>):
+  app/controllers/friends_controller.rb:24:in `create'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (45.7ms)
+
+
+Started GET "/" for ::1 at 2015-11-30 12:44:15 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#index as HTML
+  [1m[35mFriend Load (0.7ms)[0m  SELECT "friends".* FROM "friends"
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 3]]
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 4]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 5]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 6]]
+Completed 200 OK in 41ms (Views: 31.2ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/" for ::1 at 2015-11-30 12:45:01 +0530
+Processing by FriendsController#index as HTML
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 3]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 4]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 5]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 6]]
+Completed 200 OK in 18ms (Views: 11.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for ::1 at 2015-11-30 12:45:04 +0530
+Processing by FriendsController#index as HTML
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 3]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 4]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 5]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 6]]
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-11-30 12:45:12 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#index as HTML
+  [1m[35mFriend Load (0.5ms)[0m  SELECT "friends".* FROM "friends"
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 3]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 4]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 5]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 6]]
+Completed 200 OK in 31ms (Views: 21.7ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-30 12:49:59 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.6ms)[0m  SELECT "friends".* FROM "friends"
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 3]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 4]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 5]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 6]]
+Completed 200 OK in 58ms (Views: 48.1ms | ActiveRecord: 5.7ms)
+
+
+Started POST "/friends" for 127.0.0.1 at 2015-11-30 12:50:10 +0530
+Processing by FriendsController#create as JSON
+  Parameters: {"friend"=>{"first_name"=>"adfda", "last_name"=>"dsfds", "email"=>"fdsfsd", "twitter"=>"fdsdf", "total_articles"=>nil}}
+Unpermitted parameter: total_articles
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "friends" ("first_name", "last_name", "email", "twitter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["first_name", "adfda"], ["last_name", "dsfds"], ["email", "fdsfsd"], ["twitter", "fdsdf"], ["created_at", "2015-11-30 07:20:10.359522"], ["updated_at", "2015-11-30 07:20:10.359522"]]
+  [1m[36m (5.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 7]]
+Completed 201 Created in 12ms (Views: 1.6ms | ActiveRecord: 6.5ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-11-30 12:50:23 +0530
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"created_at"=>nil, "description"=>"adfafd", "notes"=>"ddfadfd", "state"=>"borrowed", "friend_id"=>"7"}}
+Unpermitted parameter: created_at
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "articles" ("description", "notes", "friend_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["description", "adfafd"], ["notes", "ddfadfd"], ["friend_id", 7], ["created_at", "2015-11-30 07:20:23.500879"], ["updated_at", "2015-11-30 07:20:23.500879"]]
+  [1m[36mFriend Load (0.2ms)[0m  [1mSELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35m (6.2ms)[0m  COMMIT
+  [1m[36mSQL (6.3ms)[0m  [1mUPDATE "friends" SET "total_articles" = COALESCE("total_articles", 0) + 1 WHERE "friends"."id" = $1[0m  [["id", 7]]
+Completed 201 Created in 39ms (Views: 4.7ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-30 12:50:25 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.4ms)[0m  SELECT "friends".* FROM "friends"
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 3]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 4]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 5]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 6]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 7]]
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-30 12:50:28 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 3]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 4]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 5]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 6]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 7]]
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-30 12:50:36 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.2ms)[0m  SELECT "friends".* FROM "friends"
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 3]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 4]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 5]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 6]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 7]]
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/friends/7" for 127.0.0.1 at 2015-11-30 12:52:25 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"7"}
+  [1m[35mFriend Load (0.4ms)[0m  SELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 7]]
+Completed 200 OK in 69ms (Views: 19.8ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-30 12:52:29 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.4ms)[0m  SELECT "friends".* FROM "friends"
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 3]]
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 4]]
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 5]]
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 6]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 7]]
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-11-30 12:52:36 +0530
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"created_at"=>nil, "description"=>"sda", "notes"=>"dfsdfdf", "state"=>"borrowed", "friend_id"=>"7"}}
+Unpermitted parameter: created_at
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "articles" ("description", "notes", "friend_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "sda"], ["notes", "dfsdfdf"], ["friend_id", 7], ["created_at", "2015-11-30 07:22:36.042000"], ["updated_at", "2015-11-30 07:22:36.042000"]]
+  [1m[35mFriend Load (0.2ms)[0m  SELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36m (6.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (11.5ms)[0m  UPDATE "friends" SET "total_articles" = COALESCE("total_articles", 0) + 1 WHERE "friends"."id" = $1  [["id", 7]]
+Completed 201 Created in 28ms (Views: 2.8ms | ActiveRecord: 18.5ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-30 12:52:38 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.4ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 3]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 4]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 5]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 6]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 7]]
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-30 12:52:42 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 3]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 4]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 5]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 6]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 7]]
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-30 12:52:44 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 3]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 4]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 5]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 6]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 7]]
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-30 12:52:57 +0530
+Processing by FriendsController#index as JSON
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT "friends".* FROM "friends"[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 3]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 4]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 5]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 6]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 7]]
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/friends/3" for 127.0.0.1 at 2015-11-30 12:54:30 +0530
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 3]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-11-30 12:54:43 +0530
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"created_at"=>nil, "description"=>"fdaadddf", "notes"=>"sdfsfd", "state"=>"borrowed", "friend_id"=>"3"}}
+Unpermitted parameter: created_at
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "articles" ("description", "notes", "friend_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["description", "fdaadddf"], ["notes", "sdfsfd"], ["friend_id", 3], ["created_at", "2015-11-30 07:24:43.153601"], ["updated_at", "2015-11-30 07:24:43.153601"]]
+  [1m[36mFriend Load (0.3ms)[0m  [1mSELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (1.9ms)[0m  COMMIT
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "friends" SET "total_articles" = COALESCE("total_articles", 0) + 1 WHERE "friends"."id" = $1[0m  [["id", 3]]
+Completed 201 Created in 7ms (Views: 0.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2015-11-30 12:54:45 +0530
+Processing by FriendsController#index as JSON
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 4]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 5]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 6]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 7]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 3]]
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2015-11-30 12:54:52 +0530
+Processing by FriendsController#index as HTML
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 4]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 5]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 6]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 7]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 3]]
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/friends/7" for 127.0.0.1 at 2015-11-30 12:55:39 +0530
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"7"}
+  [1m[35mFriend Load (0.3ms)[0m  SELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 7]]
+Completed 200 OK in 26ms (Views: 13.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/" for ::1 at 2015-11-30 12:55:42 +0530
+Processing by FriendsController#index as HTML
+  [1m[35mFriend Load (0.4ms)[0m  SELECT "friends".* FROM "friends"
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 4]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 5]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 6]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 7]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 3]]
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2015-11-30 12:55:47 +0530
+Processing by FriendsController#index as HTML
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 4]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 5]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 6]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 7]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 3]]
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-30 12:55:59 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#index as HTML
+  [1m[35mFriend Load (0.6ms)[0m  SELECT "friends".* FROM "friends"
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 4]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 5]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 6]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 7]]
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 3]]
+Completed 200 OK in 43ms (Views: 32.3ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/friends/7" for 127.0.0.1 at 2015-11-30 12:56:02 +0530
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"7"}
+  [1m[35mFriend Load (0.3ms)[0m  SELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 7]]
+Completed 200 OK in 6ms (Views: 1.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-11-30 12:56:26 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#index as HTML
+  [1m[35mFriend Load (0.6ms)[0m  SELECT "friends".* FROM "friends"
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 3.6ms)
+
+NoMethodError (undefined method `article' for #<Friend:0x007fb34c79fa70>):
+  app/controllers/friends_controller.rb:9:in `index'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.4ms)
+
+
+Started GET "/friends/7" for 127.0.0.1 at 2015-11-30 12:56:31 +0530
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"7"}
+  [1m[36mFriend Load (0.4ms)[0m  [1mSELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1[0m  [["id", 7]]
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.6ms)
+
+NoMethodError (undefined method `article' for #<Friend:0x007fb3508d12f0>):
+  app/controllers/friends_controller.rb:15:in `show'
+
+
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (36.0ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered /Users/tsavani/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (44.4ms)
+
+
+Started GET "/" for ::1 at 2015-11-30 12:56:57 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#index as HTML
+  [1m[35mFriend Load (0.6ms)[0m  SELECT "friends".* FROM "friends"
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 4]]
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 5]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 6]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 7]]
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 3]]
+Completed 200 OK in 43ms (Views: 32.3ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/friends/7" for 127.0.0.1 at 2015-11-30 12:56:59 +0530
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"7"}
+  [1m[35mFriend Load (0.3ms)[0m  SELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 7]]
+Completed 200 OK in 7ms (Views: 2.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-11-30 12:57:08 +0530
+Processing by FriendsController#index as HTML
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 4]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 5]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 6]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 7]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 3]]
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2015-11-30 12:57:34 +0530
+Processing by FriendsController#index as HTML
+  [1m[35mFriend Load (0.4ms)[0m  SELECT "friends".* FROM "friends"
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 4]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 5]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 6]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 7]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 3]]
+Completed 200 OK in 26ms (Views: 18.7ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for ::1 at 2015-11-30 12:57:39 +0530
+Processing by FriendsController#index as HTML
+  [1m[35mFriend Load (0.3ms)[0m  SELECT "friends".* FROM "friends"
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 4]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 5]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 6]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 7]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 3]]
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2015-11-30 12:58:13 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FriendsController#index as HTML
+  [1m[35mFriend Load (0.6ms)[0m  SELECT "friends".* FROM "friends"
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 4]]
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 5]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 6]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1  [["friend_id", 7]]
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 3]]
+Completed 200 OK in 43ms (Views: 32.7ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/friends/7" for 127.0.0.1 at 2015-11-30 12:58:16 +0530
+Processing by FriendsController#show as JSON
+  Parameters: {"id"=>"7"}
+  [1m[35mFriend Load (0.4ms)[0m  SELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."friend_id" = $1[0m  [["friend_id", 7]]
+Completed 200 OK in 7ms (Views: 2.1ms | ActiveRecord: 0.6ms)

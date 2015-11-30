@@ -5,7 +5,6 @@ class CreateFriends < ActiveRecord::Migration
       t.string :last_name
       t.string :email
       t.string :twitter
-      t.integer :total_articles
 
       t.timestamps null: false
     end

@@ -1,8 +1,14 @@
-<ul>
-<li>First Name: {{model.firstName}}</li> 
-<li>Last Name: {{model.lastName}}</li> 
-<li>Email: {{model.email}}</li> 
-<li>twitter: {{model.twitter}}</li>
-<button>{{link-to 'Back' 'friends'}}</button>
-<button>{{link-to 'Edit info' 'friends.edit' model}}</button>
-</ul>
+<div class="friend-profile">
+  <p>{{model.firstName}}</p>
+  <p>{{model.lastName}}</p>
+  <p>{{model.email}}</p>
+  <p>{{model.twitter}}</p>
+  <p>{{link-to 'Back' 'friends'}}</p>  
+  <p>{{link-to "Lend article" "articles.new"}}</p>
+  <p>{{link-to "Edit info" "friends.edit" model}}</p> 
+  <p><a href="#" {{action "delete" model}}>delete</a></p>
+</div>
+
+<div class="articles-container">
+  {{outlet}}
+</div>

@@ -11,19 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151124082110) do
+ActiveRecord::Schema.define(version: 20151130070006) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "articles", force: :cascade do |t|
+    t.integer  "friend_id"
+    t.string   "description"
+    t.string   "notes"
+    t.string   "state",       default: "borrowed"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+  end
+
+  add_index "articles", ["friend_id"], name: "index_articles_on_friend_id", using: :btree
 
   create_table "friends", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
     t.string   "twitter"
-    t.integer  "total_articles"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.integer  "total_articles", default: 0, null: false
   end
 
 end

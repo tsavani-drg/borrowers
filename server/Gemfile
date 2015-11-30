@@ -10,10 +10,14 @@ gem 'spring', :group => :development
 
 #gem 'sqlite3'
 
-gem "active_model_serializers", github: "rails-api/active_model_serializers"
+#gem "active_model_serializers", github: "rails-api/active_model_serializers"
+gem 'active_model_serializers', '~> 0.8.1'
 
 gem 'pg'
 
+gem 'counter_culture', '~> 0.1.29'
+gem 'rails_12factor', '~> 0.0.2'
+gem 'rack-cors', '~> 0.2.9', :require => 'rack/cors'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

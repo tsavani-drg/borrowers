@@ -1,20 +1,18 @@
-<h1>Friends Index</h1>
-{{#link-to 'friends.new'}}New Friend{{/link-to}}
-{{! The context here is the controller}} 
-<h2>Total friends: {{model.length}}</h2>
-<table>
+<table class="primary"> 
   <thead>
-	 <tr> 
-		<th>Name</th> 
-		<th></th>
+    <tr>
+      <th>Name</th> 
+      <th>Articles</th> 
+      <th></th>
     </tr>
   </thead>
-<tbody>
+  <tbody>
   {{#each friend in model}}
-	<tr>
-    <td>{{link-to friend.fullName "friends.show" friend}}</td> 
-    <td><a href="#" {{action "delete" friend}}>Delete</a></td>
-  </tr>
+    <tr>
+      <td>{{link-to friend.fullName "articles" friend}}</td> 
+      <td>{{friend.totalArticles}}</td>
+      <td><a href="#" {{action "delete" friend}}>delete</a></td>
+      </tr>
   {{/each}}
   </tbody>
 </table>
